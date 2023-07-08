@@ -1,0 +1,2 @@
+g++ -std=c++version program_name
+g++ -std==c++03 pg.cpp
