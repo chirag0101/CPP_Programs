@@ -1,6 +1,6 @@
 #include<iostream>
 
-//there occurs no nameMangling here becaise compiler treats both function same so this causes ambiguous problem
+//there occurs no nameMangling here because compiler treats both the functions same so this causes ambiguous problem
 
 int& fun(int x){
     int y=x;
