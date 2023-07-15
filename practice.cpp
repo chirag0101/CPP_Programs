@@ -1,31 +1,32 @@
 #include<iostream>
 
-class Student{
+class Company{
+    int empCount=5000;
+    // const char nam[]="IM";
+    std::string name="IBM";
 
-    int rollNo;
-    char name[15];
-    std::string name1;
-    public:                                                                        
-    
-    void setData(){
-        std::cout<<"Enter RollNo:";
-        std::cin>>rollNo;
-        // std::cout<<"Enter Name:"<<std::endl;
-        // std::cin>>name;
+public:
+    Company(){
+        std::cout<<"inside constructor"<<std::endl;
     }
 
-    void getData(){
-        std::cout<<std::endl<<"Roll No:"<<rollNo<<std::endl;
-        std::cout<<"Name:"<<name1<<std::endl;
+    void compInfo(){
+        std::cout<<"Company Info"<<std::endl;
+        std::cout<<"Name:"<<name<<std::endl;
+        std::cout<<"Emp Count:"<<empCount<<std::endl;
+
     }
 
 };
 
+class Employee{
+    int empId=10;
+    float empSal=95.00f;
+};
+
 int main(){
+    Company obj;                                               
+    obj.compInfo();
 
-    Student stud;
-
-    stud.setData();
-    stud.getData();
-
+    return 0;
 }

@@ -5,6 +5,11 @@ class Demo{
     int y=20;
 
 public:
+
+    Demo(){                                                                            //constructor with no arguments
+        std::cout<<x<<std::endl;
+    }
+
     void fun(){
         std::cout<<x<<std::endl;
         std::cout<<y<<std::endl;
@@ -14,5 +19,6 @@ public:
 
 int main(){
     Demo obj;
+    obj.fun();
     return 0;
 }
