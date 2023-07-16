@@ -1,32 +1,29 @@
 #include<iostream>
 
-class Company{
-    int empCount=5000;
-    // const char nam[]="IM";
-    std::string name="IBM";
+class Player{
+    int jerNO;                                                                  //it is 0/garbage value
+    std::string name;                                                      //empty space is been initialized
 
-public:
-    Company(){
-        std::cout<<"inside constructor"<<std::endl;
-    }
+    public:
+        void setInfo(){
+            std::cout<<"Name:";
+            // fgets("name",15,stdin);
+            std::cin>>name;
 
-    void compInfo(){
-        std::cout<<"Company Info"<<std::endl;
-        std::cout<<"Name:"<<name<<std::endl;
-        std::cout<<"Emp Count:"<<empCount<<std::endl;
+            std::cout<<std::endl<<"JerNO:";
+            std::cin>>jerNO;
+            
+        }
 
-    }
-
+        void getinfo(){
+            std::cout<<std::endl<<jerNO<<"="<<name<<std::endl;
+	}    
 };
 
-class Employee{
-    int empId=10;
-    float empSal=95.00f;
-};
 
 int main(){
-    Company obj;                                               
-    obj.compInfo();
-
+    Player obj;
+    obj.setInfo();                                               
+    obj.getinfo();
     return 0;
 }
