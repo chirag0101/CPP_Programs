@@ -19,9 +19,9 @@ int main(){
     
     Demo obj1;                                              //calls No-args constructor
     
-    Demo obj2();                                            //
+    Demo obj2();                                            //warning! 
     
-    Demo obj3{10};                                            //calls No-args constructor
+    Demo obj3{10};                                        //calls No-args constructor
 
     Demo obj4(10);                                        //calls parameterized constructor
 
