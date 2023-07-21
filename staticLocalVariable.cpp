@@ -1,7 +1,7 @@
 #include<iostream>
 
 class Demo{
-    
+
 	int x=10;
 	static int y;
 
@@ -42,4 +42,5 @@ int main(){
     obj1->gun();
 	
 	return 0;
+
 }
