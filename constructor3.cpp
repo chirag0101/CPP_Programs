@@ -14,12 +14,11 @@ class Demo{
             std::cout<<"Para Constructor"<<std::endl;
         }
 
-        Demo(Demo &xyz){
+        Demo(const Demo &xyz){
             std::cout<<"Copy Constructor"<<std::endl;
         }
 
         void fun(){
-            std::cout<<x<<std::endl;
             std::cout<<this->x<<std::endl;
         }
         
@@ -32,7 +31,6 @@ int main(){
     Demo obj2=obj1;
     
     obj1.x=20;
-    obj2.x=30;
     
     obj1.fun();
     obj2.fun();
