@@ -6,7 +6,7 @@ class Demo{
 
 public:
 
-    Demo(){                                                                            //constructor with no arguments
+    Demo(){                                                                            //Demo(*this) by default -> constructor with no arguments
         std::cout<<x<<std::endl;
     }
 
@@ -18,7 +18,7 @@ public:
 }; 
 
 int main(){
-    Demo obj;
+    Demo obj;                   //Demo(&obj)    obj is reference
     obj.fun();
     return 0;
 }
