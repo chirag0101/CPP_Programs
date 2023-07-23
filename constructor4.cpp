@@ -8,7 +8,7 @@ class Demo{
         int x;
 
         Demo(){
-            Demo(this);                                                                        //this gives error cz it passes 'this' as a parameter to the parameterized constructor where the parameter required is 'int'
+            Demo(*this);                                                                        //this gives error cz it passes 'this' as a parameter to the parameterized constructor where the parameter required is 'int'
             std::cout<<"No-args/Constructor"<<std::endl;
         }
 
@@ -18,7 +18,7 @@ class Demo{
         }
 
         Demo(Demo &xyz){
-            std::cout<<"No-args/Constructor"<<std::endl;
+            std::cout<<"Copy Constructor"<<std::endl;
         }
 
 };
