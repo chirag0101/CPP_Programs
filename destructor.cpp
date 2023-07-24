@@ -12,7 +12,7 @@ class Demo{
         Demo(int x){
             this->x=x;
             std::cout<<"Para Constructor: "<<x<<std::endl;
-            Demo();                                                             //this creates a new object & so values are fresh again
+            Demo();                                                             //this creates a new temporary object & so values are fresh again
         }
 
         void getData(){
