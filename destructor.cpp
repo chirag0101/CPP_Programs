@@ -1,3 +1,5 @@
+//destructors can be used to free connections,memory,etc
+
 #include<iostream>
 
 class Demo{
