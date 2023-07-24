@@ -1,3 +1,5 @@
+//destructor is called implicitly when the scope of an object is over
+
 #include<iostream>
 
 using namespace std;
@@ -21,6 +23,10 @@ int main(){
 	Demo obj1;
     
     Demo *obj2=new Demo();
+
+    {                                                                       //  {   This is called as a scope   }
+        Demo obj3;
+    }
     
     delete(obj2); 
 	
