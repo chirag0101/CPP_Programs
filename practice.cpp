@@ -1,29 +1,26 @@
 #include<iostream>
 
 class Player{
-    public:
-    int jerNO;                                                                  //it is 0/garbage value
-    std::string name;                                                      //empty space is been initialized
+   Player(){
+    std::cout<<"pvt ";
+   }
 
-    public:
-        // void setInfo(){
-        //     std::cout<<"Name:";
-        //     // fgets("name",15,stdin);
-        //     std::cin>>name;
+   public:
+        static Player* obj(){
+            Player *obj1=new Player();
+            return obj1;
+        }
 
-        //     std::cout<<std::endl<<"JerNO:";
-        //     std::cin>>jerNO;
-            
-        // }
-
-        void getinfo(){
-            std::cout<<std::endl<<jerNO<<"="<<name<<std::endl;
-	}    
+        void showData(){
+            printf("Pvt constructor accessed/n");
+        }
 };
 
 
 int main(){
-    Player obj{18,"chirag"};
-    obj.getinfo();
+    Player *player;
+    player=Player::obj();
+
+    player->showData();
     return 0;
 }

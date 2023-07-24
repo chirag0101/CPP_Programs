@@ -1,0 +1,3 @@
+A class having only a single object is called a singleton class.
+
+refer: Saurabh shukla on yt for private constructor in cpp vdeo

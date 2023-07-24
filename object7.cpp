@@ -22,7 +22,7 @@ class Demo{
         // }
         //writing simple member function for a const object will give error so we need to write a constant function for a const object
 
-        void getData() const{                          //const keyword for member function doesn't allow to change values of the class 
+        void getData() const{                          //const keyword for member function doesn't allow to change values of the class cz through member function we can change the values of instance variables using member functions
             //x=100;                                        //can't do this as x within the member function can't be changed   
             std::cout<<x<<std::endl;
         }
