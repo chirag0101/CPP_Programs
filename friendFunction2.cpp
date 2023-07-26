@@ -1,3 +1,5 @@
+//friend function can be written anywhere i.e: private/protected/public as it's not the member of that class 
+
 #include<iostream>
 
 class Demo{
