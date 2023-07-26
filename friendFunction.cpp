@@ -1,3 +1,7 @@
+/*the functions outside the class can't access the private as well as the protected data of the class so to access this from an 
+outside function we use friend function, we can change the values of the variables from this function but the best practice is to 
+not change the values so we use const object as a parameter*/
+
 #include<iostream>
 
 class Demo{
@@ -12,7 +16,7 @@ class Demo{
             std::cout<<"y="<<y<<std::endl;
         }
 
-        friend void accessData(Demo &obj);
+        friend void accessData(Demo &obj);                      //friend keyword is used 
     
 };
 
@@ -22,6 +26,7 @@ void accessData(Demo &obj){
     int temp=obj.x;
     obj.x=obj.y;
     obj.y=temp;
+    //swapping x&y of the class
     
     std::cout<<"x="<<obj.x<<std::endl;
     std::cout<<"y="<<obj.y<<std::endl;
@@ -29,8 +34,12 @@ void accessData(Demo &obj){
 
 int main(){
     Demo obj1;
+
+    
     obj1.getData();
+    
     accessData(obj1);
+    
     return 0;
 }
 
