@@ -1,3 +1,5 @@
+//friend Function can be friend of multiple class at same time
+
 #include<iostream>
 
 class Demo{
@@ -15,7 +17,7 @@ class Demo{
             std::cout<<"y="<<y<<std::endl;
         }
 
-        friend void accessData(const Demo &obj);                    //const makes the data read-only
+        friend void accessData(const Demo &obj);                    
     
 };
 
@@ -23,12 +25,6 @@ void accessData(const Demo &obj){
 
     std::cout<<"In Friend: "<<std::endl;
 
-    /*
-        int temp=obj.x;
-        obj.x=obj.y;
-        obj.y=temp;             gives error as swapping x & y of the class is not allowed as they are read only cz the obj passed is const
-    */
-    
     std::cout<<"x="<<obj.x<<std::endl;
     std::cout<<"y="<<obj.y<<std::endl;
 
