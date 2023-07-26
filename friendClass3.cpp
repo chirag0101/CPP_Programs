@@ -4,14 +4,14 @@
 
 class One;
 
-class Two{
+class Two{                                                  //to make 'two' as friend we need to write it first
     
     public:
         Two(){
             std::cout<<"In constructor of Class two "<<std::endl;
         }
 
-        void accessData(const One &obj);
+        void accessData(const One &obj);                    //we need to declare One first
 };
 
 class One{
