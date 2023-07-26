@@ -15,7 +15,7 @@ class One{
 		}
     
     friend class Two;
-    
+
 };
 
 class Two{
@@ -40,8 +40,12 @@ class Two{
 };
 
 int main(){
+    
     One obj1;
+    
     Two obj2;
+    
     obj2.accessData(obj1);
+    
     return 0;
 }
