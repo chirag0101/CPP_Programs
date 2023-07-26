@@ -2,6 +2,8 @@
 outside function we use friend function, we can change the values of the variables from this function but the best practice is to 
 not change the values so we use const object as a parameter*/
 
+//friendships can break the encapsulation thing so we need to use it only when required 
+
 #include<iostream>
 
 class Demo{
