@@ -2,7 +2,7 @@
 
 #include<iostream>
 
-class Demo2;    //(mandatory) cz once the object is created it requires the other class too as to be the friend
+class Demo2;    //(mandatory) cz once the object is created it requires the other class object too as the parameter
 
 class Demo{
 

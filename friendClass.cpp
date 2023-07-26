@@ -15,6 +15,7 @@ class One{
 		}
     
     friend class Two;
+    
 };
 
 class Two{
