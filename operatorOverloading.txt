@@ -1,0 +1,19 @@
+1) When a function gets implicitly called it is called as OperatorOverloading whereas for functionOverloading the functions get 
+explicitly called.
+
+2) When functionOverloading is done with the help of 'Operators' than it is called as OperatorOverloading.
+
+3) Writing a function for an operator is called as OperatorOverloading.
+
+4) Operators that can't be Overloaded:
+    sizeof()
+    : : (scopeResolution)
+    . (memberof) ex: obj.x 
+    -> and *.
+
+5) Operators that can be Overloaded:
+    unary (++ --)
+    insertion <<    (insertion cz inserting in a buffer to display)
+    extraction >>   (extracting in a buffer to store in memory)
+    arithmetic  + - / % *
+
