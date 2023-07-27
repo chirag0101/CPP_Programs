@@ -13,10 +13,11 @@ int main(){
 	Demo obj1;
 	
     std::cout<<obj1.x<<std::endl;
-    //internally->                            ostream& operator<<(ostream& cout,int obj1.x)         return cout;
+    //internally    (prototype)->                            ostream& operator<<(ostream& cout,int obj1.x)         return cout;
 	
     std::cout<<obj1<<std::endl;
-    //internally->                            ostream& operator<<(ostream& cout,Demo obj1)
+    //call->                                      operator<<(cout,obj1)
+    //internally->                            ostream& operator<<(ostream& cout,Demo& obj1)
     /*compiler can't determine the function parameter Demo which isn't written in ostream class so it throws error whereas 
     int,char,couble,etc are written in ostream class & compiler automatically identifies by default */
 	
