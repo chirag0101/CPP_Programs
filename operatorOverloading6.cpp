@@ -18,7 +18,9 @@ class Demo{
 };
 
 int operator+(const Demo &obj1,const Demo &obj2){
+
     return obj1.getData() + obj2.getData();
+
 }
 
 int main(){
