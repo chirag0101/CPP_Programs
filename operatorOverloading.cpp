@@ -23,5 +23,7 @@ int main(){
 	
     //to work on printing obj1 we can overload the operator<< function we've done in next file
 
+    error-> no matching function call for 'operator<<' std::ostream and Demo
+    
     return 0; 
 }

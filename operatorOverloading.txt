@@ -17,3 +17,7 @@ explicitly called.
     extraction >>   (extracting in a buffer to store in memory)
     arithmetic  + - / % *
 
+6) Ways for OperatorOverloading:
+    (1)Using friend function
+    (2)Using normal function
+    (3)Using member function
