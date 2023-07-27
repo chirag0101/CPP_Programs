@@ -1,4 +1,4 @@
-//Overloading arithmetic operators.
+//Overloading arithmetic operators using friend function.
 
 #include<iostream>
 
