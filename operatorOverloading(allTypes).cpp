@@ -18,19 +18,19 @@ class Demo{
 		}
 
 		//friend function
-		// friend int operator/(const Demo,const Demo);
+		friend int operator/(const Demo,const Demo);
 		
 };
 
 //friend function
-// int operator/(const Demo &obj1,const Demo &obj2){
-// 		return obj1.x/obj2.x;
-// }
+int operator/(const Demo &obj1,const Demo &obj2){
+		return obj1.x/obj2.x;
+}
 
 //normal function
-// int operator/(const Demo &obj1,const Demo &obj2){
-// 	return obj1.getData()/obj2.getData();
-// }
+int operator/(const Demo &obj1,const Demo &obj2){
+	return obj1.getData()/obj2.getData();
+}
 
 int main(){
 
