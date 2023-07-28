@@ -14,11 +14,15 @@ class Demo{
         }
 
     friend int operator<(const Demo &obj1,const Demo &obj2){
-        if(obj1.x<obj2.x){
-            return 1;
-        }else{
-            return 0;
-        }
+        
+        return obj1.x<obj2.x;
+
+        // if(obj1.x<obj2.x){
+        //     return 1;
+        // }else{
+        //     return 0;
+        // }
+        
     }
 
 };
