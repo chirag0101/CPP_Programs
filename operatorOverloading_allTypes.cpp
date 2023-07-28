@@ -34,10 +34,14 @@ class Demo{
 // 		return obj1.x/obj2.x;
 // }
 
+	//between normal & friend function , friend function gets priority
+
 //normal function
-// int operator/(const Demo &obj1,const Demo &obj2){
-// 	return obj1.getData()/obj2.getData();
-// }
+int operator/(const Demo &obj1,const Demo &obj2){
+
+	return obj1.getData()/obj2.getData();
+
+}
 
 int main(){
 
