@@ -12,12 +12,23 @@ class Demo{
                 std::cout<<x<<std::endl;
             }
 
-        friend std::istream& operator>>(std::istream& cin,Demo& obj){                   //should'nt make obj const as we can't change const object's data
-            cin>>obj.x;
-            return cin;
-        }
+            int setData(){
+                return x;
+            }
+
+
+
+        // friend std::istream& operator>>(std::istream& cin,Demo& obj){                   //should'nt make obj const as we can't change const object's data
+        //     cin>>obj.x;
+        //     return cin;
+        // }
 
 };
+
+std::istream& operator>>(std::istream& cin,Demo& obj){
+    cin>>obj.x;
+    return cin;
+}
 
 int main(){
     Demo obj1;
