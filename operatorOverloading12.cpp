@@ -1,7 +1,7 @@
 //overloading relational operators <,>,<=,>=,==,!=
 
-//overlading '<' here
-
+//overlading '<' here using normal function
+ 
 #include<iostream>
 
 class Demo{
@@ -24,15 +24,15 @@ class Demo{
 
 };
 
-int operator==(const Demo &obj1,const Demo &obj2){
-   return (obj1.getX()== obj2.getX()) && (obj1.getY()== obj2.getY());
+int operator<(const Demo &obj1,const Demo &obj2){
+   return (obj1.getX() < obj2.getX()) && (obj1.getY() < obj2.getY());
 }
 
 int main(){
     Demo obj1(20,10);
     Demo obj2(30,30);
 
-    std::cout<<(obj1==obj2)<<std::endl;
+    std::cout<<(obj1<obj2)<<std::endl;
 
     return 0;
 }
