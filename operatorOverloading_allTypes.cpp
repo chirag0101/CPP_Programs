@@ -43,7 +43,9 @@ int main(){
 
 	Demo obj1(2);
 	Demo obj2(2);
+
 	std::cout<<obj1/obj2<<std::endl;
+	
 	return 0; 
 
 }
