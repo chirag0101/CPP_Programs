@@ -4,6 +4,8 @@ not change the values so we use const object as a parameter*/
 
 //friendships can break the encapsulation thing so we need to use it only when required 
 
+//friend function is never a member of a class
+
 #include<iostream>
 
 class Demo{
