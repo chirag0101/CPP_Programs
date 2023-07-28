@@ -1,4 +1,5 @@
 //Overloading new & delete operators
+//new
 
 #include<iostream>
 #include<stdlib.h>
@@ -24,6 +25,10 @@ class Demo{
             void *ptr=malloc(size);
             //internally: void *ptr=::operator new(size)                :: goes to global namespace
             return ptr;
+        }
+
+        void operator delete(void *ptr){
+            free(ptr);
         }
 };
 
