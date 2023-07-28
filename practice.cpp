@@ -18,7 +18,7 @@ class Demo{
 		}
 
 		//friend function
-		friend int operator/(const Demo &obj1,const Demo &obj2);
+		friend int operator/(const Demo,const Demo);
 		
 };
 
@@ -28,9 +28,9 @@ int operator/(const Demo &obj1,const Demo &obj2){
 }
 
 //normal function
-int operator/(const Demo &obj1,const Demo &obj2){
-	return obj1.getData()/obj2.getData();
-}
+// int operator/(const Demo &obj1,const Demo &obj2){
+// 	return obj1.getData()/obj2.getData();
+// }
 
 int main(){
 
