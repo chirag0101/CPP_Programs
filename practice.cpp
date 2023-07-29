@@ -1,38 +1,29 @@
-//overloading relational operators <,>,<=,>=,==,!=
-
-//overlading '<' here
-
 #include<iostream>
-
+using namespace std;
 class Demo{
-
-    int x,y;
-
     public:
-        Demo(int x,int y){
-            this->x=x;
-            this->y=y;
-        }
 
-        int getX() const{
-            return x;
-        }
+    Demo(){
+        cout<<"Constructor."<<endl;
+    }
 
-        int getY() const{
-            return y;
-        }
+    ~Demo(){
+        cout<<"Destructor."<<endl;        
+    }
 
+    friend void* operator new(size_t size){
+        void *ptr=malloc(size);
+        cout<<"new"<<endl;
+        return ptr;
+    }
+
+    friend void operator delete(void* ptr){
+        cout<<"delete"<<endl;
+        free(ptr);
+    }
 };
 
-int operator==(const Demo &obj1,const Demo &obj2){
-   return (obj1.getX()== obj2.getX()) && (obj1.getY()== obj2.getY());
-}
-
 int main(){
-    Demo obj1(20,10);
-    Demo obj2(30,30);
-
-    std::cout<<(obj1==obj2)<<std::endl;
-
-    return 0;
+    Demo *obj=new Demo();
+    delete(obj);
 }
