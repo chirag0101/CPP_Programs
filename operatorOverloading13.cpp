@@ -22,14 +22,14 @@ class Demo{
             std::cout<<"des"<<std::endl;
         }
 
-        friend void* operator new(size_t size){
+        friend void* operator new(size_t size){                            
             void *ptr=malloc(size);
             //internally: void *ptr=::operator new(size)                :: goes to global namespace
             return ptr;
         }
 
         friend void operator delete(void *ptr){
-            std::cout<<"del"<<std::endl;                                    //this doesn't get printed
+            std::cout<<"del"<<std::endl;                                    //this doesn't get printed, if we remove friend than the destructor is called & then del is printed as object is out of the scope
             free(ptr);
         }
 };
