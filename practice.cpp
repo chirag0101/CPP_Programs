@@ -25,7 +25,6 @@ std::ostream& operator<<(std::ostream& cout,const Demo& obj){
     return cout;
 }
 
-
 int main(){
 
     Demo obj(10);
