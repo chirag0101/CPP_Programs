@@ -4,6 +4,7 @@
 
 class Demo{
     int x=5;
+    
     public:
         int operator++(){
             return ++x;
