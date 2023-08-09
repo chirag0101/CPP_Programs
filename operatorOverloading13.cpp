@@ -10,6 +10,7 @@ class Demo{
     public:
         
         Demo(int x){
+            std::cout<<"cons"<<std::endl;
             this->x=x;
         }
 
@@ -27,7 +28,8 @@ class Demo{
             return ptr;
         }
 
-        void operator delete(void *ptr){
+        friend void operator delete(void *ptr){
+            std::cout<<"del"<<std::endl;                                    //this doesn't get printed
             free(ptr);
         }
 };
