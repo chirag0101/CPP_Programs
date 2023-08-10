@@ -8,6 +8,17 @@ class Parent{
         int y=20;
     
     public:
+
+    Parent(){
+        
+    }
+
+        Parent(int x,int y,int z){
+            this->x=x;
+            this->y=y;
+            this->z=z;
+        }
+
         int z=30;
         void getData(){
             std::cout<<"Parent: "<<x<<" "<<y<<" "<<z<<std::endl;
@@ -17,17 +28,19 @@ class Parent{
 class Child : public Parent{
    
     public:
+        Child(int x,int y,int z){
+            Parent(x,y,z);
+        }
         void getInfo(){
-            std::cout<<"Child: "<<y<<" "<<z<<std::endl;
+            getData();
         }
 
 };
 
 int main(){
 
-    Child c;
+    Child c(40,50,60);
     c.getInfo();
-    c.getData();                 //is accessible cz now it is publically inherited       
     return 0;
 
 }

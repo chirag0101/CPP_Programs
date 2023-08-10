@@ -4,8 +4,9 @@
 //parent/base class
 //child/derived class
 
-//bydefault it is private inheritance
+//syntax-> class Child : Parent 
 
+//bydefault it is private inheritance
 
 #include<iostream>
 
@@ -18,11 +19,24 @@ class Parent{
     
     public:
         int z=30;
+        void getData(){
+            std::cout<<x<<y<<z<<std::endl;
+        }
+};
 
+class Child : Parent{
+    public:
+        void getInfo(){
+            Parent.getInfo();
+            std::cout<<y<<" "<<z<<std::endl;
+        }
 };
 
 int main(){
-    Parent p;
-    std::cout<<p.y;
+    // Parent p;
+    Child c;
+    c.getInfo();
+    c.getData();                        //this gives error as the inheritance is private & all members of parent class become private & can't be accessed outside the class
+
     return 0;
 }
