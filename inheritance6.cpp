@@ -25,8 +25,8 @@ class Child : public Parent{
         ~Child(){
             std::cout<<"Child destructor called"<<std::endl;
         }
-        friend void operator delete(void *ptr){
-            std::cout<<"C new"<<std::endl;                  //this gets called before destructor
+        void operator delete(void *ptr){
+            std::cout<<"C new"<<std::endl;                  //this gets called after destructor
             free(ptr);
         }
 
