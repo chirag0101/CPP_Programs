@@ -22,6 +22,7 @@ class Parent{
 };
 
 int main(){
-
+    Parent p;
+    std::cout<<p.y;
     return 0;
 }
