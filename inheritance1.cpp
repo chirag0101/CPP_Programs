@@ -48,12 +48,18 @@ class Company{
 int main(){
     Company obj1("rel",200);
 
+    obj1.getInfo();
+
+    //destructor of company gets called 1st as this goes 1st & Emp obj is an instance
+
     return 0;
 }
 
-/*op: comp const
+/*op: 
+emp const
+comp const
 rel 200
 chirag 20
-emp des
 comp des
+emp des
 */
