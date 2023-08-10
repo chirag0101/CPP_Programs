@@ -1,3 +1,5 @@
+//serious program
+
 #include<iostream>
 
 class Parent{
