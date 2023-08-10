@@ -8,6 +8,8 @@
 
 //bydefault it is private inheritance
 
+//starting from inheritance5.cpp
+
 #include<iostream>
 
 class Parent{
