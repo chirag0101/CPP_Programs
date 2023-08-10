@@ -12,6 +12,7 @@ class Parent{
         ~Parent(){
             std::cout<<"Parent destructor called"<<std::endl;
         }
+
 };
 
 class Child : public Parent{
@@ -24,6 +25,11 @@ class Child : public Parent{
         ~Child(){
             std::cout<<"Child destructor called"<<std::endl;
         }
+        friend void* operator new(size_t size){
+            std::cout<<"C new"<<std::endl;                  //this gets called before constructor
+            return malloc(size);
+        }
+
 };
 
 int main(){
