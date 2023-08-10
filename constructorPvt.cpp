@@ -12,7 +12,7 @@ class Player{
         }
 
         void showData(){
-            printf("Pvt constructor accessed/n");
+            printf("Pvt constructor accessed\n");
         }
 };
 
