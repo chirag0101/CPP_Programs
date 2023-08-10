@@ -6,6 +6,11 @@
 
 #include<iostream>
 
+class Parent{
+
+    
+};
+
 int main(){
 
     return 0;
