@@ -4,31 +4,34 @@
 
 class Parent{
     int x=10,y=20;
+
     public:
-        int a=50;
         Parent(){
-            std::cout<<"Parent constructor called"<<std::endl;
+            std::cout<<"Parent constructor:"<<this<<std::endl;
         }
-    
-        ~Parent(){
-            std::cout<<"Parent destructor called"<<std::endl;
+
+        Parent(int x,int y){
+            std::cout<<"Parent constructor called:"<<this<<std::endl;
+            this->x=x;
+            this->y=y;
         }
 
         void getData(){
-            std::cout<<x<<" "<<y<<" "<<a;
+            std::cout<<x<<" "<<y<<std::endl;
         }
 
 };
 
 class Child : public Parent{
     int z=30;
-    public:
-        Child(){
-            std::cout<<"Child constructor called"<<std::endl;
-        }
 
-        ~Child(){
-            std::cout<<"Child destructor called"<<std::endl;
+    public:
+
+        Child(int x,int y,int z) : Parent(x,y){                                         //this does'nt create a new object
+
+            //Parent(x,y)                       //this creates a new object & values don't change above
+        
+            std::cout<<"Child constructor called:"<<this<<std::endl;
         }
 
         void getInfo(){
@@ -39,7 +42,7 @@ class Child : public Parent{
 
 int main(){
 
-    Child c; 
-    c.getInfo();
+    Child c(40,50,60); 
+    c.getData();
     return 0;                                  
 }
