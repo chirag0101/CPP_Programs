@@ -17,14 +17,11 @@ class Child : public Parent{
 };
 
 int main(){
-
+    Parent p;
     Child c; 
-    Child *c2=new Child();
     
-    std::cout<<sizeof(c)<<std::endl;                                  //gives 12 as gives the sizeof whole class            
-    std::cout<<sizeof(c2)<<std::endl;                               //gives 8 as gives the sizeof pointer *c2 which is 8
+    std::cout<<sizeof(p)<<std::endl;                                  //gives 8 as x & y both get memory            
+    std::cout<<sizeof(c)<<std::endl;                               //gives 12 as x & y get reinitilialized for the child class due to it's object
 
-    delete(c2);
-    
     return 0;                                  
 }
