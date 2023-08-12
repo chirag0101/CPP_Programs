@@ -1,16 +1,49 @@
 #include<iostream>
+#include<math.h>
 
 int main(){
 
-    int ip,rem,num=0;
+    int num,rem=0,sum=0,count=0;
 
-    std::cout<<"Enter a number:";
-    std::cin>>ip;
+    std::cout<<"Enter Num : ";
+    std::cin>>num;
 
-        printf("rem=ip%10 = %d \n",rem=ip%10);
-        printf("rem=ip%100 = %d \n",rem=ip%100);
-        printf("ip=ip/10 = %d ",ip=ip/10);
+    int temp;
+
+if(num==3){
+
+    for(int i=100;i<=999;i++){
+        temp=i;
+        while(temp!=0){
+            rem=temp%10;
+
+            sum=sum+pow(rem,count);
+
+            temp=temp/10;
+        }
+
+        if(sum==i){
+            printf("%d",i);
+        }
+    sum=0;
+    }
+}else if(num==1||2){
+
+    for(int i=1;i<=99;i++){
+        temp=i;
+        while(temp!=0){
+            rem=temp%10;
+
+            sum=sum+pow(rem,count);
+
+            temp=temp/10;
+        }
+    if(sum==i){
+        printf("%d",i);
+    }
+    sum=0;
+    }
+}
 
     return 0;
-    
 }
