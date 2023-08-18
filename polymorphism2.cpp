@@ -38,7 +38,7 @@ class Child : public Parent{
 
 int main(){
 
-    Parent *p=new Child();
+    Parent *p=new Child();          //reference of Parent but obj of child
 
     p->getData(5);      //this call calls the getData of parent class as the method signature doesn't match
 
