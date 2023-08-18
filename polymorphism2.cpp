@@ -9,11 +9,11 @@ class Parent{
             std::cout << "Parent constructor called" << '\n';
         }
 
-        virtual void getData(int x){  
+        virtual void getData(int x){                //getData(int)
             std::cout<<"Parent GetData\n";
         }
 
-        virtual void printData(int x){
+        virtual void printData(int x){              //printData(int)
             std::cout<<"Parent printData\n";
         }
 
@@ -26,11 +26,11 @@ class Child : public Parent{
             std::cout << "Child constructor called" << '\n';
         }
 
-        void getData(float f){
+        void getData(float f){                  //getData(float)
             std::cout<<"Child GetData\n";
         }
 
-        void printData(int x){
+        void printData(int x){                   //printData(int)
             std::cout<<"Child printData\n";
         }
 
