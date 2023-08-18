@@ -1,3 +1,5 @@
+//virtual is used to bind the most derived version of that class
+
 #include<iostream>
 
 class Parent{
