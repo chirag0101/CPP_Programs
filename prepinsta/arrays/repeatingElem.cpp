@@ -19,11 +19,10 @@ int main(){
                     visited[j]=1;
                 }
             }
-         if(count<1){
-            cout<<"distinct ele: "<<arr[i];
+            if(count>0){
+                cout<<"Repeated:"<<arr[i];
             }
         }
-
     }
 
     return 0;
