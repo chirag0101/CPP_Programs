@@ -22,7 +22,7 @@ int main(){
                     visited[j]=1;
                 }
             }
-                        cout<<"Element "<<arr[i]<<" "<<count<<" times\n";
+            cout<<"Element "<<arr[i]<<" "<<count<<" times\n";
         }
     }
     return 0;
