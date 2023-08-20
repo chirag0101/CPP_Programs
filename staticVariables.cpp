@@ -2,7 +2,7 @@
 
 class Demo{
     int x=10;
-//static int y=20;                      //initialization of static variable is not allowed in c++
+    //static int y=20;                      //initialization of static variable is not allowed in c++
     static int y;
 
 public:

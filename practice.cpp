@@ -1,21 +1,24 @@
 #include<iostream>
+using namespace std;
 
-class Demo{
-    int x=10;
-
+class Parent{
     public:
-        friend void Fun(const Demo& obj){
-            int z=20;
-            std::cout<<obj.x;
+        virtual void getData(int x){
+            std::cout<<"Parent"<<x;
         }
-
 };
 
+class Child : public Parent{
+    public:
+        void getData(int y){
+            std::cout<<"Child"<<y;
+        }
+};
 
 int main(){
-
-    Demo obj;
-    std::cout<<sizeof(obj);
-    // Fun(obj);
+    // Parent *obj=new Child();
+    // obj->getData(5);
+    Child c;
+    c.getData(5);
     return 0;
 }

@@ -22,7 +22,7 @@ int main(){
     obj1.fun();
     obj2.fun();
     
-    obj2.y=50;                                                                                  //changing the value of y which is static changes the value in the global namespace
+    obj2.y=50;              //changing the value of y which is static changes the value in the global namespace
  
     obj1.fun();
     obj2.fun();

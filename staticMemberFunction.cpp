@@ -16,7 +16,7 @@ class Demo{
 			but int z=20 is allowed (just can't be accessed from outside)*/
 			int x=30;											//initialization of non-static allowed but accessing from outside not allowed
 			std::cout<<x<<std::endl;
-		std::cout<<y<<std::endl;
+			std::cout<<y<<std::endl;
 	}
 
 };	

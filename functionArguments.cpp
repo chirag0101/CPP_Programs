@@ -1,4 +1,5 @@
 #include<iostream>
+
 void fun(int *ptr){
     *ptr=30;
     std::cout<<*ptr<<std::endl;
@@ -9,7 +10,7 @@ void fun(int *ptr){
 // int main(){
 //     int x=10;
 //     std::cout<<x<<std::endl;
-//     //fun(x);                                                         //invalid conversion from int to int*, function paramater is integer but address is required
+//     //fun(x);                                            //invalid conversion from int to int*, function paramater is integer but address is required
 //     std::cout<<x<<std::endl;
 //     return 0;
 // }
