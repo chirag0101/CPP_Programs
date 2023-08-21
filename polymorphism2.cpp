@@ -1,4 +1,4 @@
-//method signature in overriding-> means 2 methods of a parent child relation having same name,return type & parameters
+//method signature in overriding-> means 2 methods of a parent child relation having same name,return type(optional) & parameters
 
 #include<iostream>
 

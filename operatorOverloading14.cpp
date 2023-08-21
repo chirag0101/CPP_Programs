@@ -18,7 +18,7 @@ class Demo{
             return --x;
         }
 
-        int operator--(int){                                //for obj-- we need to give int as parameter so that compiler knows that this is postfix
+        int operator--(int){                             //for obj-- we need to give int as parameter so that compiler knows that this is postfix
             return x--;
         }
 

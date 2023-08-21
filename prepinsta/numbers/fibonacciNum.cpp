@@ -9,7 +9,7 @@ int main(){
 
     std::cout<<"Fibonacci Series: 0 ";
 
-    for(int i=i;i<n-1;i++){
+    for(int i=1;i<n-1;i++){
     
         std::cout<<first<<" ";
 

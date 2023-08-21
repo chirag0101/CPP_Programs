@@ -1,3 +1,7 @@
+//method overriding
+
+//it is late binding as compiler decides which function to run at the time of runtime
+
 //virtual is used to bind the most derived version of that class
 
 #include<iostream>
