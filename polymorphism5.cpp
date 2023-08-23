@@ -1,6 +1,6 @@
 //final & override identifiers in c++
 
-//final is used when we does'nt want the parent class mamber function to be used in the child class i.e parent class member function can't be overloaded when used final
+//final is used when we does'nt want the parent class member function to be used in the child class i.e parent class member function can't be overloaded when used final
 
 //a class, function can be final 
 
