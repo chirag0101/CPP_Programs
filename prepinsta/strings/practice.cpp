@@ -2,21 +2,9 @@
 using namespace std;
 
 int main(){
-    string str;
-    cout<<"str:";
-    getline(cin,str);
+    int i=10;
 
-    for(int i=0;i<str.length();i++){
-        for(int j=0;j<str.length();j++){
-            if(str[j]=='{'||str[j]=='}'||str[j]=='('||str[j]==')'){
-                str[j]=' ';
-            }
-        }
-    }
+    int x=(++i)+(++i);
 
-    for(int i=0;i<str.length();i++){
-        cout<<str[i];
-    }
-    
-    return 0;
+    cout<<"x: "<<x<<"\n";
 }
