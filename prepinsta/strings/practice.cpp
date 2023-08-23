@@ -7,4 +7,6 @@ int main(){
     int x=(++i)+(++i);
 
     cout<<"x: "<<x<<"\n";
+
+    return 0;
 }

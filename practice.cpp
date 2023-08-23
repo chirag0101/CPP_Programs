@@ -3,22 +3,34 @@ using namespace std;
 
 class Parent{
     public:
-        virtual void getData(int x){
-            std::cout<<"Parent"<<x;
+        void getData(){
+            cout<<"Parent";
         }
 };
 
-class Child : public Parent{
+class Child1 : public Parent{
     public:
-        void getData(int y){
-            std::cout<<"Child"<<y;
+        virtual void getData(){
+            cout<<"Child1";
+        }
+};
+
+class Child2 : public Parent{
+    public:
+        void getData(){
+            cout<<"Child2";
+        }
+};
+
+class Child3 : public Child1,public Child2{
+    public:
+        void getData(){
+            cout<<"Child3";
         }
 };
 
 int main(){
-    // Parent *obj=new Child();
-    // obj->getData(5);
-    Child c;
-    c.getData(5);
+    Child1 *obj=new Child3();
+    obj->getData();
     return 0;
 }
