@@ -4,7 +4,7 @@ class Student{
 
     int rollNo;
     
-    public:                                                                        //after this rest of the part becomes public to users as it is private by default
+    public:                                                              //after this rest of the part becomes public to users as it is private by default
     
     void display(){
         std::cout<<"Enter RollNo:";

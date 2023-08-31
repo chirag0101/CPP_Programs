@@ -1,29 +1,34 @@
 #include<iostream>
-#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
-    int arr[5];
-    int size=5,count;
-    int visited[size];
+    int size;
+    cout<<"size:";
+    cin>>size;
 
-    cout<<"Enter Ele:";
-    
-    for(int i=0;i<5;i++){
-        cin>>arr[i];
-    }
+    int arr[size][size];
 
     for(int i=0;i<size;i++){
-        if(visited[i]!=1){
-            count=1;
-            for(int j=i+1;j<size;j++){
-                if(arr[i]==arr[j]){
-                    count++;
-                    visited[j]=1;
-                }
-            }
-            cout<<"Element "<<arr[i]<<" "<<count<<" times\n";
+        for(int j=0;j<size;j++){
+            cin>>arr[i][j];
         }
     }
-    return 0;
+
+    int count=0;
+
+    for(int i=0;i<1;i++){
+        for(int j=0;j<size;j++){
+        count=0;
+            for(int k=1;k<size;k++){
+                for(int l=0;l<size;l++){
+                    if(arr[i][j]==arr[k][l]){
+                        count++;
+                    }
+                }
+            }
+            if(count==size-1){
+                cout<<arr[i][j]<<" ";
+            }
+        }
+    }
 }
