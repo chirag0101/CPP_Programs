@@ -1,31 +1,31 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    string str;
-    getline(cin,str);
-
-    for(int i=0;i<str.length();i++){
-        if(str[i]>=65&&str[i]<=90){
-            str[i]+=32;
-        }
-    }
-
-    int start=0,end=str.length()-1,count=0;
+int main()
+{
+  //write your code here
+  int tC,size,marks,i=0,count=0;
+  cin>>tC;
+  
+  while(tC--){
     
-    while(start<end){
-        if(str[start]==str[end]){
-            count++;
-        }
-            start++;
-            end--;
-    }
-
-    if(count==(str.length()/2)){
-        cout<<"pal";
-    }else{
-        cout<<"not pal";
-    }
+    cin>>size>>marks;
     
-    return 0;
+    int arr[size];
+    
+    for(int i=0;i<size;i++){
+      cin>>arr[i]; 
+      if((count==0)&&(arr[i]==marks)){
+        
+          cout<<i<<"\n";
+          count++;
+        
+      }
+      
+    }
+    count=0;
+    
+  }
+  
+  return 0;
 }

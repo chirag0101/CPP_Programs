@@ -2,33 +2,19 @@
 using namespace std;
 
 int main(){
-    int size;
-    cout<<"size:";
-    cin>>size;
-
-    int arr[size][size];
+    int arr[5]={1,2,3,4,5};
+    int size=sizeof(arr)/sizeof(arr[0]),num=4;
+    for(int i=0;i<size;i++){
+        if(arr[i]==num){
+            size--;
+            for(int j=i;j<size;j++){
+                arr[j]=arr[j+1];
+            }
+        }
+    }
 
     for(int i=0;i<size;i++){
-        for(int j=0;j<size;j++){
-            cin>>arr[i][j];
-        }
+        cout<<arr[i];
     }
-
-    int count=0;
-
-    for(int i=0;i<1;i++){
-        for(int j=0;j<size;j++){
-        count=0;
-            for(int k=1;k<size;k++){
-                for(int l=0;l<size;l++){
-                    if(arr[i][j]==arr[k][l]){
-                        count++;
-                    }
-                }
-            }
-            if(count==size-1){
-                cout<<arr[i][j]<<" ";
-            }
-        }
-    }
+    return 0;
 }
