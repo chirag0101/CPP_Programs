@@ -1,6 +1,4 @@
-//early binding : compile time binding or static binding , late binding : run time binding or dynamic binding
-
-//early binding:    here compiler knows which function to call when some input is taken from user
+//early binding:    here compiler doesn't knows which function to call when some input is taken from user
 
 #include<iostream>
 using namespace std;
@@ -21,6 +19,8 @@ void divd(int a, int b){
     cout<<a/b;
 }
 
+void (*funPtr)(int,int)=NULL;   //function pointer
+
 int main(){
     
     cout<<"add,sub,mul,div";
@@ -30,18 +30,18 @@ int main(){
     cin>>ch;
 
     switch(ch){
-        case 1: add(10,20);
+        case 1: funPtr=add;
                     break;
-        case 2: sub(10,20);
+        case 2: funPtr=sub;
                     break;
-        case 3: mul(10,20);
+        case 3: funPtr=mul;
                     break;
-        case 4: divd(10,20);
+        case 4: funPtr=divd;
                     break;
         default:
                     cout<<"invalid";
                     break;
     }
-
+    funPtr(10,20);          //here the address funPtr holds of a function will get called
     return 0;
 }
