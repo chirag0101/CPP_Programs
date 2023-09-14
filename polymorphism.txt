@@ -1,0 +1,19 @@
+polymorphism:
+
+    overloading(early binding):
+
+        funtion overloading:
+            normal,constructor 
+
+        operator overloading:
+            >> << + - =
+
+    overriding(late binding):
+
+        between 2 classes
+        parent child relationship required
+        virtual function
+        method signatures
+        return type(size,const)
+        final
+        override

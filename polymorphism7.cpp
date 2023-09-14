@@ -1,0 +1,1 @@
+//early binding : compile time binding or static binding , late binding : run time binding or dynamic binding
