@@ -8,11 +8,11 @@ class Parent{
         }
 };
 
-class Child1:public Parent{
-
+class Child1:virtual public Parent{
+    
 };
 
-class Child2:public Parent{
+class Child2:virtual public Parent{
 
 };
 
