@@ -35,3 +35,12 @@ int main(){
 }
 
 //to avoid getting parent() called again we use virtual function so only 1 copy is made of the parent class
+
+/*
+    use of virtual keyword
+                        demo
+                    /       ^      \
+                 child1   |     child2
+                    \        |       /
+                     grandchild                 grandchild directly goes to demo
+*/                  
