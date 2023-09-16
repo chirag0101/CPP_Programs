@@ -1,3 +1,15 @@
+//damond problem:
+/*
+                Parent
+            /            \
+        Child1      Child2
+            \             /
+              Baccha
+
+              Here compiler doesn't know which copy of getData to be called for ex: from child1 or child2
+              So by using the virtual keyword we can remove ambiguity
+*/
+
 #include<iostream>
 using namespace std;
 
