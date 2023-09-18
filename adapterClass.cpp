@@ -7,7 +7,8 @@ class Demo{
         virtual void gun()=0;
 };
 
-//adapter class ->  creating just the placeholders of function that are virtual in base class cz when we override 2 virtual functions in derived classes than we can't create object of any of them
+//adapter class ->  creating just the placeholders of function that are virtual in base class cz when we override 2 virtual functions in 
+//derived classes than we can't create object of any of them
 class Adapter:public Demo{
     void fun(){
 

@@ -20,7 +20,7 @@ struct Player{
 
 int main(){
 
-// struct Player obj;       way to create obj of a structure in c
+    // struct Player obj;       way to create obj of a structure in c
 
     Player obj;                 //object creation in c++
     //memory is given only after object creation
