@@ -6,9 +6,10 @@ int main(){
     
     cout<<"Num:";
     cin>>num;
-    
-    for(int i=1;i<=num;i++){
+    int i=1;
+    while(i<=num){
         fact=fact*i;
+        i++;
     }
 
     cout<<fact;
