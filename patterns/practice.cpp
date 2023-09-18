@@ -2,19 +2,16 @@
 using namespace std;
 
 int main(){
-    int col,row,num=1;
-
-    cout<<"Col:";
-    cin>>col;
-    cout<<"Row:";
-    cin>>row;
-
-    for(int i=0;i<row;i++){
-        for(int j=0;j<col;j++){
-            cout<<num++<<" ";
-        }
-        cout<<"\n";
+    int fact=1,num;
+    
+    cout<<"Num:";
+    cin>>num;
+    
+    for(int i=1;i<=num;i++){
+        fact=fact*i;
     }
+
+    cout<<fact;
     return 0;
 }
 
