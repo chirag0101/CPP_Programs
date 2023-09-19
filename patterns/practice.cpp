@@ -2,17 +2,24 @@
 using namespace std;
 
 int main(){
-    int fact=1,num;
-    
-    cout<<"Num:";
-    cin>>num;
-    int i=1;
-    while(i<=num){
-        fact=fact*i;
-        i++;
-    }
+    int row,col;
+    cout<<"row:";
+    cin>>row;
+    cout<<"col:";
+    cin>>col;
 
-    cout<<fact;
+    for(int i=0;i<row/2;i++){
+        for(int j=0;j<=i;j++){
+            cout<<"* ";
+        }
+        cout<<"\n";
+    }
+       for(int i=0;i<row/2;i++){
+        for(int j=col-2;j>=i;j--){
+            cout<<"* ";
+        }
+        cout<<"\n";
+        }
     return 0;
 }
 
