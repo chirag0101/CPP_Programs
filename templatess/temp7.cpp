@@ -1,4 +1,4 @@
-//templates for member functions
+//templates for a member functions
 
 #include<iostream>
 using namespace std;
