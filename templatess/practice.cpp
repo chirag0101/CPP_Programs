@@ -1,12 +1,25 @@
 #include<iostream>
 using namespace std;
 
-template<typename T>
-T min2(T x,T y){
-    return (x<y)?x:y;
-}
+class P{
+    public:
+        ~P(){
+            cout<<"p";
+        }
+};
 
+class C:public P{
+    public:
+        ~C(){
+            cout<<"c";
+        }
+};
+
+void f1(){
+    P *p=new C();
+    delete p;
+}
 int main(){
-    cout<<min2('A',10)<<endl;   
+    void f1();
     return 0;
 }
