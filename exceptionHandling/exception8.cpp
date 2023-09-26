@@ -2,19 +2,26 @@
 using namespace std;
 
 class Demo{
-    public:
-        int arr[5]={10,20,30,40,50};
+    int arr[5]={10,20,30,40,50};
 
+    public:
         int operator[](int index){
-            return arr[index];
+           if(index<0||index>=5){
+                throw index;
+           }else{
+                return arr[index];
+           }
         }
 };
 
 int main(){
-
     Demo obj;
 
-    cout<<obj[5]<<"\n";
+    try{
+        cout<<obj[3]<<"\n";
+    }catch(int i){
+        cout<<"Exception at:"<<i;
+    }
 
     return 0;
 }
