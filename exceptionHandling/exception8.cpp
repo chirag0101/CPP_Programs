@@ -12,9 +12,9 @@ class Demo{
 
 int main(){
 
-    Demo obj[5];
+    Demo obj;
 
-    cout<<obj[3]<<"\n";
+    cout<<obj[5]<<"\n";
 
     return 0;
 }
