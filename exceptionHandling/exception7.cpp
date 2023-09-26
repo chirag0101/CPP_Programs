@@ -17,6 +17,7 @@ void findEle(int arr[],int find){
             throw -1;
         }catch(int){
             cout<<"Not found\n";
+            throw;                                      //using throw in catch is called as rethrowing exception
         }
     }
 
@@ -35,7 +36,11 @@ int main(){
     cout<<"to Find:";
     cin>>find;
 
-    findEle(arr,find);
+    try{
+        findEle(arr,find);
+    }catch(int){
+        cout<<"in main\n";
+    }
 
     return 0;
 }
