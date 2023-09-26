@@ -2,12 +2,10 @@
 using namespace std;
 
 class Demo{
-
+    
 };
 
 int main(){
-
-    Demo obj;
 
     return 0;
 }
