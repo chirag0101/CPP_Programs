@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void findEle(int *arr,int find){
+void findEle(int arr[],int find){
 
     int count=0;
     
