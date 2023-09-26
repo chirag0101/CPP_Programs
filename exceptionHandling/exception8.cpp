@@ -3,9 +3,9 @@ using namespace std;
 
 class Demo{
     public:
-        // friend ostream& operator[](){
-
-        // }
+        friend ostream& operator[](){
+            
+        }
 };
 
 int main(){
