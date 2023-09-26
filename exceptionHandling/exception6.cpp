@@ -1,3 +1,5 @@
+//as throw() is depricated in c++ 11 so we need to run this file as g++ -std=c++03 exception6.cpp
+
 #include<iostream>
 using namespace std;
 
