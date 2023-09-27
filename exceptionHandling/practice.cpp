@@ -3,15 +3,21 @@ using namespace std;
 
 class belowAvg{
     public:
-        belowAvg(char const* str){
-            cout<<str<<"\n";
+        // belowAvg(char const* str){
+        //     cout<<str<<"\n";
+        // }
+        void getException(){
+            cout<<"belowAvg";
         }
 };
 
 class aboveAvg{
     public:
-        aboveAvg(char const* str){
-            cout<<str<<"\n";
+        // aboveAvg(char const* str){
+        //     cout<<str<<"\n";
+        // }
+        void getException(){
+            cout<<"aboveAvg";
         }
 };
 
@@ -50,20 +56,18 @@ int main(){
     try{
         for(int i=2;i<5;i++){
             if(arr[i].sal<=5){
-                throw "belowAvg";
+                throw belowAvg();
             }else if(arr[i].sal>=15){
-                throw "aboveAvg";
+                throw aboveAvg();
             }else{
                 cout<<"Avg sal";
                 break;
             }
         }
-    }catch(char const* str){
-        if(str=="belowAvg"){
-            belowAvg obj(str);
-        }else{
-            aboveAvg obj(str);
-        }
+    }catch(belowAvg obj){
+        obj.getException();
+    }catch(aboveAvg obj){
+        obj.getException();
     }
 
     return 0;
