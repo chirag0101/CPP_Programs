@@ -1,10 +1,35 @@
 STL standard template library is a library which contains various classes, namely:
 
 1. container classes(types):
-        -sequential
-        -container adapter
-        -associative
-        -unordered_associative
+      
+        -sequential container
+                classes include:
+                            -vectors
+                            -arrays
+                            -list
+                            -forward_list
+                            -string
+                            -dequeue
+
+        -container adapter container
+                classes include:
+                            -queue
+                            -priority queue
+                            -stack
+
+        -associative container
+                classes include:
+                            -set
+                            -multiset
+                            -map
+                            -multimap
+
+        -unordered_associative container
+                classes include:
+                            -unordered_set
+                            -unordered_multiset
+                            -unordered_map
+                            -unordered_multimap
 
 2. iterator classes
 
