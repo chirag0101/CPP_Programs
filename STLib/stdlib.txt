@@ -1,5 +1,11 @@
 STL standard template library is library which contains:
 
-1. container classes
+1. container classes:
+        -sequential
+        -container adapter
+        -associative
+        -unordered_associative
+
 2. iterator classes
+
 3. algorithms
