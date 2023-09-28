@@ -1,6 +1,6 @@
 STL standard template library is a library which contains various classes, namely:
 
-1. container classes:
+1. container classes(types):
         -sequential
         -container adapter
         -associative
