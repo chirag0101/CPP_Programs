@@ -1,16 +1,45 @@
 #include<iostream>
 using namespace std;
 
-class Emp{
-    int id;
-    string name;
-    float sal;
-
+class belowAvg{
     public:
+        // belowAvg(char const* str){
+        //     cout<<str<<"\n";
+        // }
+        void getException(){
+            cout<<"belowAvg";
+        }
+};
+
+class aboveAvg{
+    public:
+        // aboveAvg(char const* str){
+        //     cout<<str<<"\n";
+        // }
+        void getException(){
+            cout<<"aboveAvg";
+        }
+};
+
+class Emp{
+    public:
+        int id;
+        string name;
+        float sal;
+        
         Emp(int id,string name,float sal){
             this->id=id;
             this->name=name;
             this->sal=sal;
+        }
+
+        int operator[](int index){
+                return this->sal;
+        }
+
+        friend ostream& operator<<(ostream& cout,Emp obj){
+            cout<<obj.sal;
+            return cout;
         }
 
 };
@@ -24,14 +53,21 @@ int main(){
 
     Emp arr[]={obj1,obj2,obj3,obj4,obj5};
 
-    Emp obj6;
-
     try{
-        for(int i=0;i<5;i++){
-            cout<<arr[i.sal];
+        for(int i=2;i<5;i++){
+            if(arr[i].sal<=5){
+                throw belowAvg();
+            }else if(arr[i].sal>=15){
+                throw aboveAvg();
+            }else{
+                cout<<"Avg sal";
+                break;
+            }
         }
-    }catch(){
-
+    }catch(belowAvg obj){
+        obj.getException();
+    }catch(aboveAvg obj){
+        obj.getException();
     }
 
     return 0;
