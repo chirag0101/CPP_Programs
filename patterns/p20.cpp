@@ -2,18 +2,17 @@
 using namespace std;
 
 int main(){
+    int rows=4;
 
-    int rows=4,num=1;
-
-    for(int i=1;i<=4;i++){
-        for(int j=3;j>=i;j--){
+    for(int i=1;i<=rows;i++){
+        int num=1;
+        for(int k=1;k<i;k++){
             cout<<"  ";
         }
-        for(int k=1;k<=i;k++){
+        for(int j=rows;j>=i;j--){
             cout<<num++<<" ";
         }
         cout<<"\n";
     }
 
-    return 0;
 }
