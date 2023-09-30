@@ -4,7 +4,7 @@ STL standard template library is a library which contains various classes, namel
       
         -sequential container
                 classes include:
-                            -vectors
+                            -vectors (different types of vector iterators in stdlib7.cpp)
                             -arrays
                             -list
                             -forward_list
