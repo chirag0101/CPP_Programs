@@ -1,17 +1,13 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
-class Demo{
-    char arr[5]={10,20,30,40,50};
-    public:
-    template<typename T>
-        T operator[](T i){
-            return arr[i];
-        }
-};
-
 int main(){
-    Demo obj;
-    cout<<obj[2];
+    vector<int> obj={10,20,30};
+    vector<int> :: iterator itr;
+
+    for(itr=obj.end()-1;itr!=obj.begin()-1;itr--){
+        cout<<*itr<<" ";
+    }
     return 0;
 }
