@@ -5,6 +5,7 @@
 using namespace std;
 
 int main(){
+    
     forward_list<int> fw={10,20,30,40,50};
     forward_list<int> :: iterator itr;
 
