@@ -1,10 +1,23 @@
 //FIFO methodology
 
-//priority_queue arranges elements based on the priority of elements
+//priority_queue arranges elements based on the priority of elements, it doesn't have front()
 
 #include<iostream>
 #include<queue>
 using namespace std;
+
+
+void showPQ(priority_queue<int>& obj,int size){
+    
+    int i=0;
+    
+    while(i!=size){
+        cout<<obj.top()<<" ";
+        obj.pop();
+        i++;
+    }
+
+}
 
 void showQ(queue<int>& obj,int size){
     
@@ -16,18 +29,6 @@ void showQ(queue<int>& obj,int size){
         i++;
     }
     cout<<"\n";
-
-}
-
-void showPQ(priority_queue<int>& obj,int size){
-    
-    int i=0;
-    
-    while(i!=size){
-        cout<<obj.top()<<" ";
-        obj.pop();
-        i++;
-    }
 
 }
 
