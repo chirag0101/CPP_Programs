@@ -15,7 +15,7 @@ int main(){
 
     outfile.close();                           
 
-    ofstream outfile2("file.txt",ios::app);
+    ofstream outfile2("file.txt",ios::app);     //to append this after the last value
 
     outfile2<<"Salesforce\n";
 
