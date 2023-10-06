@@ -9,7 +9,7 @@ int main(){
 
     string str;
 
-    while(inFile){
+    while(inFile){                                                      //this goes till the end of the file
         getline(inFile,str);
         cout<<str<<"\n";
     }
