@@ -10,7 +10,7 @@ int main(){
     outfile<<"chirag\n";                       //this is the way to add something in the file, it appends at the end of the file
     outfile<<"rupali\n";
     outfile<<"sanjay\n";
-    outfile<<"suryawanshi\n";
+    outfile<<"suryawanshi\n";              
 
     outfile.close();                              //close the opening file
 

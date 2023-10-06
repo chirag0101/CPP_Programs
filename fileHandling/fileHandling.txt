@@ -1,3 +1,5 @@
+fileHandling is used for permanent storage of data
+
 
 ios class
                 -istream class: get(), read(), getline()    
