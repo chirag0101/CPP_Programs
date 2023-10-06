@@ -1,0 +1,9 @@
+
+ios class
+                -istream class: get(), read(), getline()    
+                -ostream class: put(), write()
+
+for fileHandling we have: fstream class:
+                                                        -ifstream
+                                                        -ofstream
+                                                        -fstream
