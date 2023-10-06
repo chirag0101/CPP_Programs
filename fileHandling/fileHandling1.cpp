@@ -16,7 +16,6 @@ int main(){
 
     return 0;
 }
-
     /*it goes as :    
     class ofstream{
         public:
