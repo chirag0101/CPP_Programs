@@ -2,6 +2,7 @@
 
 #include<iostream>
 #include<fstream>
+#include<ios>
 using namespace std;
 
 int main(){
@@ -14,7 +15,9 @@ int main(){
 
     outfile.close();                           
 
-    ofstream outfile2("file.txt",app);
+    ofstream outfile2("file.txt",ios::app);
+
+    outfile2<<"Salesforce\n";
 
     return 0;
 }
