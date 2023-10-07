@@ -1,0 +1,5 @@
+Lambda functions are not actually the functions but the objects of a function.
+
+Also known as functer(function che objects).
+
+As it is an object so no stack frame is pushed.
