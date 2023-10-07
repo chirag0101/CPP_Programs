@@ -3,13 +3,15 @@
 #include<iostream>
 #include "myNameSpaces.h"                         //writing in " " means to search in the current directory
 
+using namespace amazon;
+
 int main(){
 
     microsoft::compInfo();
     
     amazon::empCount=4;
     
-    amazon::compInfo();
+    compInfo();
 
     return 0;
 }
