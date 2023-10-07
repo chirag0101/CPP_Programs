@@ -1,5 +1,10 @@
+//creating our namespace
+
 #include<iostream>
-using namespace std;
+
+namespace mySpace{
+
+}
 
 int main(){
     
