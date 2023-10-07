@@ -1,7 +1,7 @@
 //creating our header file in our own nameSpaces.h header file
 
 #include<iostream>
-#include "nameSpaces.h"                         //writing in " " means to search in the current directory
+#include "myNameSpaces.h"                         //writing in " " means to search in the current directory
 
 int main(){
 
