@@ -1,3 +1,5 @@
+//in inline function the code is directly dumped where the function is called
+
 //inline functions are same like function like macros but here compiler decides whether the function should be inline or not
 
 //function can't be inline if it contains: recursion, more lines of code, static variables, for loops,etc
