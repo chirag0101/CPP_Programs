@@ -1,1 +1,3 @@
 NameSpace is a container used to store elements & use them our programs, they can be used to reduce the ambiguity.
+
+We also use NameSpace to use same names for different purposes.

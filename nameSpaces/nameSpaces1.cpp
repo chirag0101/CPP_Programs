@@ -2,7 +2,7 @@
 
 #include<iostream>
 
-namespace company{
+namespace amazon{
     int empCount=1000;
 
     void compInfo(){
@@ -11,8 +11,19 @@ namespace company{
 
 }
 
+namespace microsoft{
+    int empCount=2000;
+
+    void compInfo(){
+        std::cout<<"Microsoft EmpCount:"<<empCount<<"\n";
+    }
+
+}
 
 int main(){
+
+    amazon::compInfo();
+    microsoft::compInfo();
     
     return 0;
 }
