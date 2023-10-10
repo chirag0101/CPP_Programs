@@ -5,27 +5,14 @@ int main(){
 
     int a=10,b=20;
 
-    auto add = [=] (int x,int y) -> int{
-        cout<<a<<" "<<b<<"\n";
+    auto add=[] (int x,int y) -> int{
         return x+y;
     };
 
-    /*the above code goes as:
-            
-            class Demo{
-                int a,b;
-                Demo(int a,int b){
-                    this->a=a;
-                    this->b=b;
-                }
+    void xyz(int a,add(10,20);){
+        cout<<"hello";
+    }
 
-                int operator(int x,int y){
-                    cout<<a<<" "<<b<<"\n";
-                    return x+y;
-                }
-            };
-
-    */
 
     return 0;
 }
