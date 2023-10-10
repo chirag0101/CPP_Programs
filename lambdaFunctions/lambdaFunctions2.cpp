@@ -6,11 +6,17 @@ using namespace std;
 
 int main(){
 
+    //way-1
+    [](int x,int y){
+        cout<<x<<" "<<y<<" ";
+    }(10,20);
+
+    //way-2
     auto obj=[](int x,int y){               //obj is the object to the body which is called as a class
         cout<<x<<" "<<y;
     };
 
-    obj(10,20);
+    obj(10,20);                                  //obj has ( ) which is overloaded
 
     return 0;
 }

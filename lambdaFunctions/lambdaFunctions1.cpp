@@ -8,3 +8,5 @@ int main(){
     }();    // ( ) means a function call to the above function itself as it doesn't have any name & can't be called later
 
 }
+
+//next program->
