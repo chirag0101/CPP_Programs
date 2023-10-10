@@ -20,10 +20,11 @@ int main(){
                 }
 
                 int operator(int x,int y){
+                    cout<<a<<" "<<b<<"\n";
                     return x+y;
                 }
             };
-            
+
     */
 
     return 0;
