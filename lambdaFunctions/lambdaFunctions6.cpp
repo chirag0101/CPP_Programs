@@ -14,7 +14,7 @@ int main(){
 
     cout<<a<<"\n";
 
-    auto add=[=] (int x,int y)mutable -> int{
+    auto add=[=] (int x,int y)mutable -> int{                               //writing mutable allows us to change values of a outside the function
         a=20;
         cout<<a<<"\n";
         return x+y;
