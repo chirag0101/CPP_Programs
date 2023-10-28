@@ -1,24 +1,31 @@
 #include<iostream>
 using namespace std;
 
-class Demo{
-    private:
-        Demo(){
-            cout<<"inside constructor\n";
-        }
-    public:
-        static Demo *obj;
-        static Demo *createObj(){
-            return obj;
-        }
-        void getData(){
-            cout<<this;
-        }
-};
-
-Demo* Demo::obj=new Demo();
-
 int main(){
-    Demo *ptr=Demo::createObj()->getData();
-    cout<<ptr;
+    int size;
+    cout<<"Enter Size:";
+    cin>>size;
+    
+    int arr[size];
+    
+    cout<<"Enter Elements:";
+    for(int i=0;i<size;i++){
+        cin>>arr[i];
+    }
+
+    for(int i=0;i<size;i++){
+        for(int j=i+1;j<size;j++){
+            if(arr[i]>arr[j]){
+                arr[i]=arr[i]+arr[j];
+                arr[j]=arr[i]-arr[j];
+                arr[i]=arr[i]-arr[j];
+            }
+        }
+    }
+
+    cout<<"Sorted list:";
+    for(int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    }
+    return 0;
 }
