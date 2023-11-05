@@ -7,25 +7,24 @@ int main(){
     cin>>size;
     
     int arr[size];
-    
-    cout<<"Enter Elements:";
+    int visited[size];
+
+    cout<<"Enter Eles:";
     for(int i=0;i<size;i++){
         cin>>arr[i];
     }
 
+    int sum;
+    cout<<"Enter Sum:";
+    cin>>sum;
+
     for(int i=0;i<size;i++){
         for(int j=i+1;j<size;j++){
-            if(arr[i]>arr[j]){
-                arr[i]=arr[i]+arr[j];
-                arr[j]=arr[i]-arr[j];
-                arr[i]=arr[i]-arr[j];
+            if((arr[i]+arr[j])==sum){
+                cout<<i<<" "<<j<<"\n";
             }
         }
     }
 
-    cout<<"Sorted list:";
-    for(int i=0;i<size;i++){
-        cout<<arr[i]<<" ";
-    }
-    return 0;
+    
 }
