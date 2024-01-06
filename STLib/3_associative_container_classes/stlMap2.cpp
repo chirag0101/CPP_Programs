@@ -4,7 +4,9 @@ using namespace std;
 
 int main(){
     
-    map<string,string> mp={{"chirag","suryawanshi"},{"umesh","shedale"},{"umesh","chaudhari"}};     
+    map<string,string> mp={{"chirag","suryawanshi"},
+                                             {"umesh","shedale"},
+                                             {"umesh","chaudhari"}};     
 
     map<string,string> :: iterator itr;
 

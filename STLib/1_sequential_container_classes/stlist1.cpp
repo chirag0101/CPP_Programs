@@ -8,7 +8,7 @@ int main(){
     list<int> l={10,20,20,30,40,40,50};
     list<int> :: iterator itr;
 
-//printing normal list
+    //printing normal list
     for(itr=l.begin();itr!=l.end();itr++){
         cout<<*itr<<" ";
     }
@@ -20,7 +20,7 @@ int main(){
         cout<<*itr<<" ";
     }
 
-//methods of list: as it is doubly LL it allows operation for front as well as back
+    //methods of list: as it is doubly LL it allows operation for front as well as back
 
     l.push_front(10);
     l.push_back(20);

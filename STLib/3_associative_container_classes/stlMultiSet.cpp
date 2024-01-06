@@ -1,4 +1,4 @@
-//multi-set doesn't removes elements but orders it into a sorted manner
+//multi-set doesn't removes similar elements but orders it into a sorted manner
 
 //there is no header file to be included for multi-set
 
