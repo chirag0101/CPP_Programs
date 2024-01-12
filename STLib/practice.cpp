@@ -6,13 +6,12 @@ using namespace std;
 
 int main(){
     int arr[]={50,40,30,20,10};
-    
-    int size=sizeof(arr)/sizeof(arr[0]);
-    
-    sort(begin(arr),end(arr));
-    
-    for(int i=0;i<size;i++){
-        cout<<arr[i]<<" ";
-    }
+    string s="123";
+    sort(s.begin(),s.end());
+    cout<<s;
+
+    do{
+        cout<<s<<" ";
+    }while(next_permutation(s.begin(),s.end()));
     return 0;
 }
