@@ -12,7 +12,7 @@ int main(){
     
     vector<int>::iterator itr;
 
-    for(int i=v.begin();i!=v.end();i++){
+    for(itr=v.begin();itr!=v.end();itr++){
         cout<<*itr<<"\n";
     }
 

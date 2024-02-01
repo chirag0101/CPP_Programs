@@ -8,6 +8,7 @@
 #include<queue>
 #include<map>
 #include<utility>
+#include<string>
 using namespace std;
 
 int main(){
@@ -79,9 +80,31 @@ int main(){
     //     cout<<i.first<<"->"<<i.second<<" ";
     // }
 
-    pair<int,string> p;
-    p.first=1;
-    p.second="chirag";
-    cout<<p.first<<p.second;
+    // pair<int,string> p;
+    // p.first=1;
+    // p.second="chirag";
+    // cout<<p.first<<p.second;
 
+    string s;
+    cout<<"enter :";
+    getline(cin,s);
+
+    string::iterator itr;
+
+    string ::iterator itr2;
+
+    cout<<s.size();
+
+    itr=s.begin();
+    itr2=s.end()-1;
+
+    while(itr<itr2){
+        swap(*itr,*itr2);
+        itr++;
+        itr2--;
+    }
+
+    for(auto c:s){
+        cout<<c<<" ";
+    }
 }
