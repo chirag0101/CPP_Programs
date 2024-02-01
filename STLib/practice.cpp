@@ -7,6 +7,7 @@
 #include<unordered_set>
 #include<queue>
 #include<map>
+#include<utility>
 using namespace std;
 
 int main(){
@@ -70,12 +71,17 @@ int main(){
     //     cout<<i<<" ";
     // }
 
-    map<char,string> m;
-    m['a']="chirag";
-    m['b']="soham";
-    m['c']="umesh";
-    for(auto i:m){
-        cout<<i.first<<" ";
-    }
+    // map<char,string> m;
+    // m['a']="chirag";
+    // m['b']="soham";
+    // m['c']="umesh";
+    // for(auto i:m){
+    //     cout<<i.first<<"->"<<i.second<<" ";
+    // }
+
+    pair<int,string> p;
+    p.first=1;
+    p.second="chirag";
+    cout<<p.first<<p.second;
 
 }
