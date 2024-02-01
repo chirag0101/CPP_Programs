@@ -25,6 +25,5 @@ int main(){
         cout<<val;
     }
 
-
     return 0;
 }
