@@ -1,35 +1,20 @@
 #include<iostream>
-#include<string.h>
-#include<stdlib.h>
 using namespace std;
 
-void readStr(string s,int start,int end){
+void strReverse(string& s,int start,int end){
     if(start>end){
         return;
     }
-    readStr(s,start+1,end);
-    cout<<s[start];
+    swap(s[start],s[end]);
+    strReverse(s,start+1,end-1);
+
 }
 
 int main(){
     string s;
+    cout<<"Enter:";
     getline(cin,s);
-    readStr(s,0,s.length());
-   
-    return 0;
-}
 
-// string strRev(string s){
-    // int size=s.length();
-    // for(int i=size-1;i>=0;i--){
-    //     cout<<s[i]<<" ";
-    // }
-    // int start=0;
-    // int end=s.length()-1;
-    // while(start<end){
-    //    swap(s[start],s[end]);
-    //    start++;
-    //    end--; 
-    // }
-    // return s;
-// }
+    strReverse(s,0,s.length()-1);
+    cout<<s;
+}

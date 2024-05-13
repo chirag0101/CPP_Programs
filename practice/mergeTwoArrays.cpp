@@ -25,8 +25,20 @@ int main(){
                 swap(arr1[i],arr2[j]);
             }
         }
+        cout<<"First: ";
+        for(int k=0;k<size1;k++){
+            cout<<arr1[k]<<" ";
+        }
+        cout<<"Second:";
+        for(int k=0;k<size1;k++){
+                    cout<<arr2[k]<<" ";
+                }
+        cout<<endl;
+
     }
 
+    cout<<endl;
+    cout<<endl;
     for(int i=0;i<size1;i++){
         cout<<arr1[i]<<" ";
     }
