@@ -3,83 +3,83 @@ using namespace std;
 
 class Node{
     public:
-        int data;
-        Node *next;
+    Node* prev;
+    int data;
+    Node* next;
 };
 
-Node *head=NULL;
+Node* head=NULL;
 
 Node* createNode(){
     Node* newNode=new Node();
-
+    
+    newNode->prev=NULL;
     cout<<"Enter Data:";
     cin>>newNode->data;
-    
     newNode->next=NULL;
-    
+
     return newNode;
 }
 
 void addFirst(){
-    Node *newNode=createNode();
+    Node* newNode=createNode();
     if(head==NULL){
         head=newNode;
+        newNode->prev=NULL;
+        newNode->next=NULL;
     }else{
         Node* temp=head;
+        newNode->next=temp;
+        temp->prev=newNode;
         head=newNode;
-        head->next=temp;
     }
 }
 
 void addAtPos(int pos){
+    Node* newNode=createNode();
     if(head==NULL){
         addFirst();
-    }else if(pos==1){
-        addFirst();
     }else{
+        Node* temp=head;
         int count=1;
-        Node *temp=head;
-       
         while(count!=(pos-1)){
             count++;
             temp=temp->next;
         }
-
-        Node* newNode=createNode();
-    
-        Node* temp2=temp->next;
-    
+        newNode->next=temp->next;
         temp->next=newNode;
-        newNode->next=temp2;
+        newNode->prev=temp;
     }
 }
 
 void addLast(){
-    Node *newNode=createNode();
+    Node* newNode=createNode();
     if(head==NULL){
-        head=newNode;
+        addFirst();
     }else{
-        Node *temp=head;
+        Node* temp=head;
         while(temp->next!=NULL){
             temp=temp->next;
         }
         temp->next=newNode;
+        newNode->prev=temp;
     }
 }
 
 void delFirst(){
     if(head==NULL){
-        cout<<"LL Empty!";
+        cout<<"DLL Empty!";
+        return;
     }else{
         Node* temp=head;
-        head=head->next;
+        temp->next->prev=NULL;
+        head=temp->next;
         free(temp);
     }
 }
 
 void delAtPos(int pos){
     if(head==NULL){
-        cout<<"LL Empty!";
         return;
     }else if(pos==1){
         delFirst();
@@ -90,24 +90,24 @@ void delAtPos(int pos){
             count++;
             temp=temp->next;
         }
-
         Node* temp2=temp->next->next;
         free(temp->next);
         temp->next=temp2;
+        temp2->prev=temp;
     }
 }
 
 void delLast(){
     if(head==NULL){
-        cout<<"LL empty!";
-    }else if(head->next==NULL){
-        delFirst();
+        cout<<"DLL Empty!";
+        return;
     }else{
-        Node *temp=head;
+        Node* temp=head;
         while(temp->next->next!=NULL){
             temp=temp->next;
         }
-        free(temp->next);
+        Node* temp2=temp->next;
+        free(temp2);
         temp->next=NULL;
     }
 }
@@ -116,37 +116,17 @@ void printLL(){
     if(head==NULL){
         cout<<"LL empty!";
     }else{
-        Node *temp=head;
+        Node* temp=head;
         while(temp!=NULL){
-            cout<<temp->data<<"-";
+            cout<<" <-"<<temp->data<<"-> ";
             temp=temp->next;
         }
-        cout<<"X";  
-    }
-}
-
-void reverseLL(){
-    if(head==NULL){
-        cout<<"LL Empty!";
-    }else{
-        Node* curr=head;
-        Node* prev=NULL;
-        Node* next=head;
-
-        while(curr!=NULL){
-            next=curr->next;
-            curr->next=prev;
-            prev=curr;
-            curr=next;
-        }
-        head=prev;
     }
 }
 
 int main(){
-    Node *obj=new Node();
-    
-    while(1){
+  while(1){
+        while(1){
         int ip;
         cout<<"\nEnter Function:"<<endl;
         cout<<"1. Add Node at 1st Pos."<<endl;
@@ -193,9 +173,9 @@ int main(){
                 break;
             }
 
-            case 7:
-                reverseLL();
-                break;
+            // case 7:
+            //     reverseLL();
+            //     break;
 
             case 8:
                 printLL();
@@ -210,6 +190,6 @@ int main(){
                 break;
         }
     }
-
+  }
     return 0;
 }
