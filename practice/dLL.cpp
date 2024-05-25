@@ -74,6 +74,7 @@ void delFirst(){
         Node* temp=head;
         temp->next->prev=NULL;
         head=temp->next;
+        
         free(temp);
     }
 }
