@@ -118,7 +118,7 @@ void reverseLL(){
                 temp->next=prev;
                 prev=temp;
             }
-                temp=nex;
+                temp=nex ;
         }
         temp->next=prev;
         head=temp;
