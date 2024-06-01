@@ -5,9 +5,12 @@ class Node{
     public:
     int data;
     Node *next;
-};
 
-Node *head=NULL;
+    Node(int data,Node* node){
+        int data=this->data;
+
+    }
+};
 
 int main(){
     Node *node1=new Node();

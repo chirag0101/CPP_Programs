@@ -103,7 +103,7 @@ void detectCycle(){
 
         while(temp!=NULL){
             if(visited[temp]==true){
-                cout<<"Cycle Detected! at "<<temp->data<<endl;
+                cout<<"Cycle Detected! at   "<<temp->data<<endl;
                 return;
             }else{
                 visited[temp]=true;
