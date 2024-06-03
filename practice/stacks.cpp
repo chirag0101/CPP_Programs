@@ -64,6 +64,10 @@ int main(){
                 pop(arr,size);
                 break;
             }
+            case 3:{
+                cout<<arr[top]<<endl;
+                break;
+            }
             case 4:{
                 display(arr);
                 break;
