@@ -2,11 +2,10 @@
 using namespace std;
 
 int main(){
-    int a=5;
-    int b=2;
-    int c=3;
-    int r=a*(b+c)/b-c;
-
-    cout<<r;
+    int a=10;
+    int &r=a;
+    int var=20;
+    r=20;
+    cout<<a;
     return 0;
 }
