@@ -10,8 +10,8 @@ void queue(int data){
     if(front==-1){
         front++;
     }
-    rear++;
-    arr[rear]=data;
+    // rear++;
+    arr[++rear]=data;
 }
 
 void dequeue(){
