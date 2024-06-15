@@ -1,11 +1,15 @@
 #include<iostream>
 using namespace std;
 
+void func(int* ref){
+   *ref=20;
+}
+
 int main(){
     int a=10;
-    int &r=a;
-    int var=20;
-    r=20;
-    cout<<a;
+    int *ref=&a;
+    // int b=func(ref);
+    func(ref);
+    cout<<*ref;
     return 0;
 }
