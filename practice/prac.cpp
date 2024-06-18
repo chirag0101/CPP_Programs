@@ -4,22 +4,19 @@ using namespace std;
 int main(){
     int year;
     cin>>year;
-    bool isLeap=false;
+    bool isLeap=true;
 
-    if(year%400==0){
-        isLeap=true;
-    }else if(year%100!=0 && year%4==0){
-                isLeap=true;
-            }else{
-                isLeap=false;
-            }
-
-
-    if(isLeap){
-        cout<<"LEAP";
-    }else{
-        cout<<"NOT LEAP";
+    for(int i=2;i<year;i++){
+        if(year%i==0){
+            isLeap=false;
+            break;
+        }
     }
 
+    if(isLeap){
+        cout<<"Prime";
+    }else{
+        cout<<"Not";
+    }
     return 0;
 }
