@@ -1,22 +1,25 @@
 #include<iostream>
 using namespace std;
 
-int ans(int a,int b,int c){
-    if(a>b && a>c){
-        return a;
-    }else if(b>a && b>c){
-        return b;
-    }else{
-        return c;
-    }
-}
-
 int main(){
-    int num1,num2,num3;
-    cin>>num1>>num2>>num3;
-    int sum=ans(num1,num2,num3);
- 
-    cout<<sum;
+    int year;
+    cin>>year;
+    bool isLeap=false;
+
+    if(year%400==0){
+        isLeap=true;
+    }else if(year%100!=0 && year%4==0){
+                isLeap=true;
+            }else{
+                isLeap=false;
+            }
+
+
+    if(isLeap){
+        cout<<"LEAP";
+    }else{
+        cout<<"NOT LEAP";
+    }
 
     return 0;
 }
