@@ -1,20 +1,22 @@
 #include<iostream>
 using namespace std;
 
-int ans(int ip){
-    int sum=0;
-    if(ip==1){
-        return 1;
+int ans(int a,int b,int c){
+    if(a>b && a>c){
+        return a;
+    }else if(b>a && b>c){
+        return b;
+    }else{
+        return c;
     }
-
-   return sum+ip+ans(--ip);
 }
 
 int main(){
-    int ip;
-    cin>>ip;
+    int num1,num2,num3;
+    cin>>num1>>num2>>num3;
+    int sum=ans(num1,num2,num3);
+ 
+    cout<<sum;
 
-    int sum=ans(ip);
-    cout<<sum<<endl;
     return 0;
 }
