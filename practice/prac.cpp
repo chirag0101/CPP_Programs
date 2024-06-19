@@ -2,21 +2,18 @@
 using namespace std;
 
 int main(){
-    int year;
-    cin>>year;
-    bool isLeap=true;
+    int num=123;
+    int sum=0;
+    cout<<"Enter Num:";
+    cin>>num;
+    cout<<num<<endl;
 
-    for(int i=2;i<year;i++){
-        if(year%i==0){
-            isLeap=false;
-            break;
-        }
+    while(num>0){
+        int rem=(num%10);
+        sum=sum+rem;
+        num=(num/10);
     }
 
-    if(isLeap){
-        cout<<"Prime";
-    }else{
-        cout<<"Not";
-    }
+    cout<<sum<<endl;
     return 0;
 }
