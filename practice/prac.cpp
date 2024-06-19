@@ -3,17 +3,25 @@ using namespace std;
 
 int main(){
     int num=123;
-    int sum=0;
+    int rev=0;
     cout<<"Enter Num:";
     cin>>num;
     cout<<num<<endl;
 
+    int store=num;
+
     while(num>0){
         int rem=(num%10);
-        sum=sum+rem;
+        rev=rem+rev*10;
         num=(num/10);
     }
 
-    cout<<sum<<endl;
+    if(rev==store){
+        cout<<"Palindrome";
+    }else{
+        cout<<"Not Palindrome";
+    }
+
+    // cout<<rev<<endl;
     return 0;
 }
