@@ -12,14 +12,14 @@ int main(){
 
     while(num>0){
         int rem=(num%10);
-        rev=rem+rev*10;
+        rev=(rem*rem*rem)+rev;
         num=(num/10);
     }
 
     if(rev==store){
-        cout<<"Palindrome";
+        cout<<"Armstrong";
     }else{
-        cout<<"Not Palindrome";
+        cout<<"Not Armstrong";
     }
 
     // cout<<rev<<endl;
