@@ -2,26 +2,17 @@
 using namespace std;
 
 int main(){
-    int num=123;
-    int rev=0;
-    cout<<"Enter Num:";
+    int num;
+    cout<<"NUM:";
     cin>>num;
-    cout<<num<<endl;
 
-    int store=num;
-
-    while(num>0){
-        int rem=(num%10);
-        rev=(rem*rem*rem)+rev;
-        num=(num/10);
+    int a=0;
+    int b=1;
+    for(int i=0;i<=num;i++){
+        cout<<a<<" ";
+        int c=a+b;
+        a=b;
+        b=c;
     }
-
-    if(rev==store){
-        cout<<"Armstrong";
-    }else{
-        cout<<"Not Armstrong";
-    }
-
-    // cout<<rev<<endl;
     return 0;
 }
