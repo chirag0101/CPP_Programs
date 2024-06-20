@@ -2,23 +2,30 @@
 #include<vector>
 using namespace std;
 
+int facto(int num){
+    int fact=1;
+    for(int i=1;i<=num;i++){
+        fact=fact*i;
+    }
+    return fact;
+}
+
 int main(){
     int num;
     cin>>num;
+    int power;
+    cin>>power;
 
-    int num2=num;
-    int sum;
-
-    while(num!=0){
-        int rem=num%10;
-        sum=sum+rem;
-        num=num/10;
+    int ans=num;
+    for(int i=1;i<power;i++){
+        ans=ans*num;
     }
 
-    if(num2%sum==0){
-        cout<<"Yes";
+    if((ans%10)==num){
+        cout<<"yes";
     }else{
         cout<<"No";
     }
+
     return 0;
 }
