@@ -2,30 +2,31 @@
 #include<vector>
 using namespace std;
 
-int facto(int num){
-    int fact=1;
-    for(int i=1;i<=num;i++){
-        fact=fact*i;
-    }
-    return fact;
-}
-
 int main(){
-    int num;
-    cin>>num;
-    int power;
-    cin>>power;
+    int size;
+    cout<<"Enter number of elements to input:";
+    cin>>size;
 
-    int ans=num;
-    for(int i=1;i<power;i++){
-        ans=ans*num;
+    int arr[size];
+    for(int i=0;i<size;i++){
+        cin>>arr[i];
     }
 
-    if((ans%10)==num){
-        cout<<"yes";
-    }else{
-        cout<<"No";
+    cout<<"Before Swap: ";
+    for(int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
     }
 
+    int start=0;
+    int end=size-1;
+    int mid=(start+end)/2;
+
+
+
+    cout<<endl<<"After Swap: ";
+    for(int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
     return 0;
 }
