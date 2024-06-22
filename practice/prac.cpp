@@ -1,32 +1,75 @@
 #include<iostream>
 #include<vector>
+#include<string>
+#include<stdlib.h>
 using namespace std;
 
 int main(){
-    int size;
-    cout<<"Enter number of elements to input:";
-    cin>>size;
+    int num1;
+    cout<<"Enter Num:";
+    cin>>num1;
 
-    int arr[size];
-    for(int i=0;i<size;i++){
-        cin>>arr[i];
+    vector<int> arr;
+
+    string s;
+
+    int num2=num1;
+    
+    while(num2!=0){
+        int rem=num2%10;
+        arr.push_back(rem);
+        num2=num2/10;
     }
 
-    cout<<"Before Swap: ";
-    for(int i=0;i<size;i++){
-        cout<<arr[i]<<" ";
+    cout<<"The words are:";
+    for(int i=arr.size()-1;i>=0;i--){
+        int ch=arr[i];
+
+        switch(ch){
+            case 0 :{
+                s=s+" Zero";
+                break;
+            }
+            case 1 :{
+                s=s+" One";
+                break;
+            }
+            case 2 :{
+                s=s+" Two";
+                break;
+            }
+            case 3 :{
+                s=s+" Three";
+                break;
+            }
+            case 4 :{
+                s=s+" Four";
+                break;
+            }
+            case 5 :{
+                s=s+" Five";
+                break;
+            }
+            case 6 :{
+                s=s+" Six";
+                break;
+            }
+            case 7 :{
+                s=s+" Seven";
+                break;
+            }
+            case 8 :{
+                s=s+" Eight";
+                break;
+            }
+            case 9 :{
+                s=s+" Nine";
+                break;
+            }
+        }
     }
 
-    int start=0;
-    int end=size-1;
-    int mid=(start+end)/2;
+    cout<<s<<endl;
 
-
-
-    cout<<endl<<"After Swap: ";
-    for(int i=0;i<size;i++){
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
     return 0;
 }
