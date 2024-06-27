@@ -1,33 +1,16 @@
 #include<iostream>
 using namespace std;
 
+
 int main(){
-    int numInput;
-    cout<<"Enter Num:";
-    cin>>numInput;
-    
-    int numInputCopy=numInput;
-    int rev=0;
-
-    while(numInputCopy!=0){
-        int rem=numInputCopy%10;
-        if(rem==0){
-            rem=1;    
-        }
-        rev=rev*10+rem;
-        numInputCopy=numInputCopy/10;
+    int *arr=new int[10]{};
+    for(int i=0;i<10;i++){
+        arr[i]=i;
+        // cout<<i<<" ";
+        // cout<<arr[i]<<" ";
     }
 
-    numInputCopy=rev;
-    rev=0;
-
-    while(numInputCopy!=0){
-        int rem=numInputCopy%10;
-        rev=rev*10+rem;
-        numInputCopy=numInputCopy/10;
+    for(int i=0;i<10;i++){
+        cout<<arr[i]<<" ";
     }
-
-    cout<<rev<<endl;
-
-    return 0;
 }
