@@ -1,16 +1,21 @@
 #include<iostream>
 using namespace std;
-
-
-int main(){
-    int *arr=new int[10]{};
-    for(int i=0;i<10;i++){
-        arr[i]=i;
-        // cout<<i<<" ";
-        // cout<<arr[i]<<" ";
+void Tester(float xx, float yy = 5.0);
+class IndiaBix
+{
+    int x; 
+    int y; 
+    public:
+    void Tester(float xx, float yy = 5.0)
+    {
+        x = xx;
+        y = yy;
+        cout<< ++x % --y; 
     }
-
-    for(int i=0;i<10;i++){
-        cout<<arr[i]<<" ";
-    }
+};
+int main()
+{
+    IndiaBix objBix;
+    objBix.Tester(5.0, 5.0);
+    return 0; 
 }
