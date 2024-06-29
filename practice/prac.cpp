@@ -1,21 +1,19 @@
 #include<iostream>
 using namespace std;
-void Tester(float xx, float yy = 5.0);
-class IndiaBix
-{
-    int x; 
-    int y; 
-    public:
-    void Tester(float xx, float yy = 5.0)
-    {
-        x = xx;
-        y = yy;
-        cout<< ++x % --y; 
+
+class student{
+    public: 
+    string name;
+    int data;
+
+    student(){
+        cout<<"Object Created"<<endl;
     }
 };
-int main()
-{
-    IndiaBix objBix;
-    objBix.Tester(5.0, 5.0);
-    return 0; 
+
+int main(){
+    student s1;
+    cout<<(s1.name)<<endl;
+    cout<<float(s1.data)<<endl;
+
 }
