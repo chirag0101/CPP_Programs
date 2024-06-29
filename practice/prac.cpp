@@ -1,19 +1,12 @@
 #include<iostream>
 using namespace std;
 
-class student{
-    public: 
-    string name;
-    int data;
-
-    student(){
-        cout<<"Object Created"<<endl;
-    }
+class stud{
+    int name;
+    string namse;
 };
-
 int main(){
-    student s1;
-    cout<<(s1.name)<<endl;
-    cout<<float(s1.data)<<endl;
-
+    stud s1;
+    cout<<sizeof(s1);
+    return 0;
 }
