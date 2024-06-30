@@ -1,29 +1,28 @@
 #include<iostream>
+using namespace std;
 
-class Student{
+class A{
     public:
-        int rollNo;
-        std::string name;
-        int *ptr;
-
-        Student(){
-            ptr=new int();
-        }
-
-        Student(Student &obj){
-            this->rollNo=obj.rollNo;
-            this->name=obj.name;
-            this->ptr=new int();
-        }
+     void fun(){
+        cout<<"A::fun()"<< endl;
+     }
 };
 
-int main(){
-    Student s1;
-    s1.rollNo=10;
-    
-    Student s2(s1);
-    *(s2.ptr)=20;
+ class B : virtual public A{
+   
+};
 
-    std::cout<<s1.rollNo;
+ class C : virtual public A{
+      
+};
+
+class D : virtual public B, virtual public C{
+    public:
+};
+
+
+int main(){
+    D* d=new D{};
+    d->fun();
     return 0;
 }
