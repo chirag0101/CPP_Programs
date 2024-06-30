@@ -10,9 +10,9 @@ class Student{
 
         }
 
-        Student(Student &obj){
-            this->rollNo=obj.rollNo;
-        }
+        // Student(Student &obj){
+        //     this->rollNo=obj.rollNo;
+        // }
 
 };
 
@@ -22,13 +22,9 @@ int main(){
 
     Student s2(s1);
 
-    cout<<s2.rollNo;
+    *(s2.ptr)=20;
 
-    s2.rollNo=20;
-
-    cout<<s1.rollNo<<endl;
-
-    cout<<s2.rollNo;
+    cout<<*(s1.ptr);
 
     return 0;
 }
