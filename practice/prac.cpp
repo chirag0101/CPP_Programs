@@ -1,27 +1,30 @@
 #include<iostream>
 using namespace std;
 
-class stud{
-    // int name;
-    // string namse;
+class Student{
     public:
-    int name=10;
-    int fun(int name){
-        name=name;
-        return name;
-    }
+        int rollNo;
+        int *ptr=&rollNo;
 
-    stud(){
-        
-    }
+        Student(){
 
-    stud(stud &obj){
-        name=obj.name;
-    }
+        }
+
+        Student(Student &obj){
+            this->rollNo=obj.rollNo;
+        }
+
 };
+
 int main(){
-    stud s1;
-    stud s2(s1);
-    cout<<s2.name;
+    Student s1;
+    s1.rollNo=10;
+
+    Student s2(s1);
+
+    cout<<s2.rollNo;
+
+
+
     return 0;
 }
