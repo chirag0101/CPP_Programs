@@ -7,7 +7,14 @@ class Student{
         int *ptr=&rollNo;
 
         Student(){
+            ptr=new int();
+            *ptr=rollNo;
+        }
 
+        Student(Student &obj){
+            this->rollNo=obj.rollNo;
+            this->ptr=new int();
+            *ptr=obj.rollNo;
         }
 
         // Student(Student &obj){
@@ -24,7 +31,12 @@ int main(){
 
     *(s2.ptr)=20;
 
-    cout<<*(s1.ptr);
+    // cout<<*(s1.ptr);
+    cout<<s1.ptr<<endl;
+    cout<<s2.ptr<<endl;
+
+    cout<<*(s1.ptr)<<endl;
+    cout<<*(s2.ptr);
 
     return 0;
 }
