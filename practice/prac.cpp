@@ -24,7 +24,11 @@ int main(){
 
     cout<<s2.rollNo;
 
+    s2.rollNo=20;
 
+    cout<<s1.rollNo<<endl;
+
+    cout<<s2.rollNo;
 
     return 0;
 }
