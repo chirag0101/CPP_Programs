@@ -15,9 +15,6 @@ class Student{
             this->name=obj.name;
             this->ptr=new int();
         }
-
-    
-
 };
 
 int main(){
