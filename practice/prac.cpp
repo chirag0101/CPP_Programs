@@ -6,18 +6,23 @@ class Student{
         int rollNO;
         static int count;
 
-    Student(int rollNO){
-        this->rollNO=rollNO;
-        count++;
-        cout<<count<<endl;
+    Student(){
+        cout<<"COnst"<<endl;
+    }
+
+    ~Student(){
+        cout<<"Destruct"<<endl;
     }
 };
 
 int Student::count=0;
 
 int main(){
-    Student s1(1);
-    Student s2(1);
+    Student s1;
+
+    Student *obj=new Student;
+
+    delete(obj);
 
     return 0;
 }
