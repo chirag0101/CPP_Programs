@@ -35,5 +35,6 @@ class Child:public Parent{
 
 int main(){
     Parent *obj=new Child();
+    obj->fun();
     return 0;
 }
