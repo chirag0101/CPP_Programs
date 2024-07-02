@@ -1,28 +1,32 @@
 #include<iostream>
 using namespace std;
 
-class Student{
-    public:
-        int rollNO;
-        static int count;
-
-    Student(){
-        cout<<"COnst"<<endl;
-    }
-
-    ~Student(){
-        cout<<"Destruct"<<endl;
-    }
-};
-
-int Student::count=0;
-
 int main(){
-    Student s1;
-
-    Student *obj=new Student;
-
-    delete(obj);
+    int n=3;
+    for(int i=0;i<n;i++){
+        for(int k=n;k>i+1;k--){
+            cout<<" ";
+        }
+        for(int j=0;j<=i;j++){
+            cout<<"*";
+        }
+        for(int l=0;l<i;l++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    for(int i=0;i<n;i++){
+        for(int k=0;k<i;k++){
+            cout<<" ";
+        }
+        for(int j=n;j>i;j--){
+            cout<<"*";
+        }
+        for(int l=n;l>i+1;l--){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
 
     return 0;
 }
