@@ -3,22 +3,36 @@ using namespace std;
 
 int main(){
     int n=3;
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=i;j++){
-            std::cout<<j<<"";
+    for(int i=0;i<n;i++){
+        for(int j=n;j>i;j--){
+            cout<<"*";
         }
-        for(int k=n;k>i;k--){
-            std::cout<<" ";
+        for(int k=0;k<i;k++){
+            cout<<" ";
         }
-        for(int k=n;k>i;k--){
-            std::cout<<" ";
+        for(int k=0;k<i;k++){
+            cout<<" ";
         }
-        int num=i;
-        for(int l=1;l<=i;l++){
+        for(int l=n;l>i;l--){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
 
-            std::cout<<num--<<"";
+    for(int i=0;i<n;i++){
+        for(int j=0;j<=i;j++){
+            cout<<"*";
         }
-        std::cout<<std::endl;
+        for(int k=n;k>i+1;k--){
+            cout<<" ";
+        }
+        for(int k=n;k>i+1;k--){
+            cout<<" ";
+        }        
+        for(int l=0;l<=i;l++){
+            cout<<"*";
+        }
+        cout<<endl;
     }
     return 0;
 }
