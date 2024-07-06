@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    char ch;
-    if(ch = printf(""))
-        printf("It matters\n");
+    int x = 10, y = 20;
+    if(!(x) && x)
+        printf("x = %d\n", x);
     else
-        printf("It doesn't matters\n");
+        printf("y = %d\n", y);
     return 0;
 }
