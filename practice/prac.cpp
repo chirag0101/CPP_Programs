@@ -1,19 +1,18 @@
 #include<stdio.h>
-int fun();
 
 int main()
 {
-    int i;
-    printf("%d ",i);
-    while(i)
-    {
-        fun();
-        main();
-    }
-    printf("Hello\n");
+    void fun(char*);
+    char a[100];
+    a[0] = 'A'; a[1] = 'B';
+    a[2] = 'C'; a[3] = 'D';
+    fun(&a[0]);
     return 0;
 }
-int fun()
+void fun(char *a)
 {
-    printf("Hi");
+    a++;
+    printf("%c", *a);
+    a++;
+    printf("%c", *a);
 }
