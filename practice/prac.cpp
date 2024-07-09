@@ -1,51 +1,20 @@
-#include<iostream>
-#include<vector>
-using namespace std;
+#include<stdio.h>
 
-int main(){
-    vector<int> nums={1,2,3,4,5,6,7};
-    int k=3;
-
-    int i=0;
-    int j=k-1;
-
-    while(i<j){
-        swap(nums[i],nums[j]);
-        i++;
-        j--;
-    }
-    for(int k=0;k<nums.size();k++){
-        cout<<nums[k]<<" ";
-    }
-    cout<<endl;
-
-    i=k;
-    j=nums.size()-1;
-
-    while(i<j){
-        swap(nums[i],nums[j]);
-        i++;
-        j--;
-    }
-
-    for(int k=0;k<nums.size();k++){
-        cout<<nums[k]<<" ";
-    }
-    cout<<endl;
-
-    i=0;
-    j=nums.size()-1;
-
-    while(i<j){
-        swap(nums[i],nums[j]);
-        i++;
-        j--;
-    }
-    for(int k=0;k<nums.size();k++){
-        cout<<nums[k]<<" ";
-    }
-    cout<<endl;
-
-
+int main()
+{
+    void fun(int, int[]);
+    int arr[] = {1, 2, 3, 4};
+    int i;
+    fun(4, arr);
+    for(i=0; i<4; i++)
+        printf("%d,", arr[i]);
     return 0;
+}
+void fun(int n, int arr[])
+{
+    int *p=0;
+    int i=0;
+    while(++i < n)
+        p = &arr[i];
+    *p=0;
 }
