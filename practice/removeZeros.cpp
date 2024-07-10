@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+//within an array:
+
 int main(){
     int arr[]={0,0,1,2,3,0,4,5};
     int size=8;
@@ -29,6 +31,9 @@ int main(){
 
     return 0;
 }
+
+
+//using 2 arrays:
 
 // int main(){
 //     int arr[]={0,0,1,1,2};
