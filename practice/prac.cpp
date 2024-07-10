@@ -1,56 +1,55 @@
 #include<iostream>
+#include<vector>
+
 using namespace std;
 
-int main(){
-    int arr[]={0,0,1,2,3,0,4,5};
-    int size=8;
+vector<int> findUnion(int arr1[], int arr2[], int n, int m)
+    {
 
-    int i=0;
-    int j=0;
-
-    while(j<size){
-        if(arr[j]==0){
-            j++;
-        }else{
-            arr[i]=arr[j];
+        vector<int> v;
+        
+        int i=0;
+        int j=0;
+        
+        while(i<n && j<m){
+                if(arr1[i]==arr2[j]){
+                    v.push_back(arr1[i]);
+                    i++;
+                    j++;
+                }else if(arr1[i]<arr2[j]){
+                    v.push_back(arr1[i]);
+                    i++;
+                }else{
+                    v.push_back(arr2[j]);
+                    j++;
+                }
+        }
+        
+        while(i<n){
+            v.push_back(arr1[i]);
             i++;
+        }
+        
+        while(j<m){
+            v.push_back(arr2[j]);
             j++;
         }
+        
+        return v;
     }
 
-    for(int a=i;a<size;a++){
-        arr[a]=0;
-    }
+int main(){
+    int arr1[]={1,2,3,4,5};
+    int arr2[]={4,5,6,7,8};
+    int size1=sizeof(arr1)/sizeof(arr1[0]);
+    int size2=sizeof(arr2)/sizeof(arr2[0]);
 
-    for(int b=0;b<size;b++){
-        cout<<arr[b]<<" ";
+    vector<int> v=findUnion(arr1,arr2,size1,size2);
+
+    for(int num:v){
+        cout<<num<<" ";
     }
     cout<<endl;
 
     return 0;
 }
-
-// int main(){
-//     int arr[]={0,0,1,1,2};
-//     int size=sizeof(arr)/sizeof(arr[0]);
-
-//     int arr2[size]={0};
-
-//     int i=0;
-//     int j=0;
-
-//     while(j<size){
-//         if(arr[j]!=0){
-//             arr2[i]=arr[j];
-//             j++;
-//             i++;
-//         }else{
-//             j++;
-//         }
-//     }
-
-//     for(int a=0;a<size;a++){
-//         cout<<arr2[a]<<" ";
-//     }
-//     return 0;
-// }
