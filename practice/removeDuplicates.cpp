@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-    int arr[]={1,2,2,2,3,3,3,3,4};
+    int arr[]={10,20,20,30,30,40};
     int size=sizeof(arr)/sizeof(arr[0]);
 
     int i=0;
