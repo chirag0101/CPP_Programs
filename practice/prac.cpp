@@ -1,54 +1,30 @@
-#include<iostream>
-#include<vector>
 
+
+
+#include <bits/stdc++.h>
 using namespace std;
 
-vector<int> findUnion(int arr1[], int arr2[], int n, int m){
+int missingNumber(vector<int>&a, int N) {
 
-        vector<int> v;
-        
-        int i=0;
-        int j=0;
-        
-        while(i<n && j<m){
-                if(arr1[i]==arr2[j]){
-                    v.push_back(arr1[i]);
-                    i++;
-                    j++;
-                }else if(arr1[i]<arr2[j]){
-                    v.push_back(arr1[i]);
-                    i++;
-                }else{
-                    v.push_back(arr2[j]);
-                    j++;
-                }
-        }
-        
-        while(i<n){
-            v.push_back(arr1[i]);
-            i++;
-        }
-        
-        while(j<m){
-            v.push_back(arr2[j]);
-            j++;
-        }
-        
-        return v;
+    //Summation of first N numbers:
+    int sum = (N * (N + 1)) / 2;
+
+    //Summation of all array elements:
+    int s2 = 0;
+    for (int i = 0; i < N - 1; i++) {
+        s2 += a[i];
     }
 
-int main(){
-    int arr1[]={1,2,3,4,5};
-    int arr2[]={4,5,6,7,8};
-    int size1=sizeof(arr1)/sizeof(arr1[0]);
-    int size2=sizeof(arr2)/sizeof(arr2[0]);
+    int missingNum = sum - s2;
+    return missingNum;
+}
 
-    vector<int> v=findUnion(arr1,arr2,size1,size2);
-
-    for(int num:v){
-        cout<<num<<" ";
-    }
-    cout<<endl;
-
+int main()
+{
+    int N = 5;
+    vector<int> a = {10, 20, 40, 50};
+    int ans = missingNumber(a, N);
+    cout << "The missing number is: " << ans << endl;
     return 0;
 }
+
