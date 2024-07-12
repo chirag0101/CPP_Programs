@@ -3,8 +3,7 @@
 
 using namespace std;
 
-vector<int> findUnion(int arr1[], int arr2[], int n, int m)
-    {
+vector<int> findUnion(int arr1[], int arr2[], int n, int m){
 
         vector<int> v;
         
