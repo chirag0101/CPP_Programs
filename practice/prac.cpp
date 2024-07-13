@@ -1,30 +1,25 @@
-
-
-
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-int missingNumber(vector<int>&a, int N) {
+int main(){
+    int arr[]={1,1,0,1,1,1};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    int count=0;
+    int maxCount=0;
 
-    //Summation of first N numbers:
-    int sum = (N * (N + 1)) / 2;
+    for(int i=0;i<size;i++){
 
-    //Summation of all array elements:
-    int s2 = 0;
-    for (int i = 0; i < N - 1; i++) {
-        s2 += a[i];
+        if(arr[i]==1){
+            count++;
+        }else{
+            count=0;
+        }
+
+        if(maxCount<count){
+            maxCount=count;
+        }
     }
 
-    int missingNum = sum - s2;
-    return missingNum;
-}
-
-int main()
-{
-    int N = 5;
-    vector<int> a = {10, 20, 40, 50};
-    int ans = missingNumber(a, N);
-    cout << "The missing number is: " << ans << endl;
+    cout<<maxCount<<endl;
     return 0;
 }
-
