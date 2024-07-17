@@ -1,31 +1,26 @@
 #include<iostream>
-#include<cmath>
 using namespace std;
 
-int differenceOfSum(int n,int upTo){
-    int divisible=0;
-    int notDivisible=0;
+int main(){
+    int arr[]={4,4,4,4,4,1};
+    int size=sizeof(arr)/sizeof(arr[0]);
 
-    for(int i=1;i<=upTo;i++){
-        if(i%n==0){
-            divisible+=i;
-        }else{
-            notDivisible+=i;
+    int appearOne=arr[0];
+
+    for(int i=0;i<size;i++){
+        if(arr[i]!=-1){
+            int count=0;
+            for(int j=i+1;j<size;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                    arr[j]=-1;
+                }
+            }
+            if(count<1){
+                appearOne=arr[i];
+            }
         }
     }
-
-    return round(notDivisible-divisible);
-}
-
-int main(){
-    
-    int n;
-    cout<<"Enter N:";
-    cin>>n;
-    
-    int upTo;
-    cin>>upTo;
-
-    cout<<differenceOfSum(n,upTo)<<endl;
+    cout<<appearOne<<" ";
     return 0;
 }
