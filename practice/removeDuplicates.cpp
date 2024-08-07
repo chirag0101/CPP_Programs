@@ -7,18 +7,27 @@ int main(){
     int arr[]={10,20,20,30,30,40};
     int size=sizeof(arr)/sizeof(arr[0]);
 
-    int i=0;
-    int j=0;
-
-    while(j<size){
-        if(arr[j]!=arr[i]){
-            arr[i+1]=arr[j];
-            i++;
-            j++;
-        }else{
+    int j=1;
+    for(int i=0;i<size-1;i++){
+        if(arr[i]!=arr[i+1]){
+            arr[j]=arr[i+1];
             j++;
         }
     }
+
+
+    // int i=0;
+    // int j=0;
+
+    // while(j<size){
+    //     if(arr[j]!=arr[i]){
+    //         arr[i+1]=arr[j];
+    //         i++;
+    //         j++;
+    //     }else{
+    //         j++;
+    //     }
+    // }
 
     for(int i=0;i<size;i++){
         cout<<arr[i]<<" ";
